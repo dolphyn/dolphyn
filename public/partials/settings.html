@@ -1,0 +1,76 @@
+
+<div id="settings" class="right">
+
+    <div class="settings-item">
+        <h4>IMAP</h4>
+
+        <form action="#" method="get">
+            <fieldset>
+                <label for="imap_hostname">Hostname</label>
+                <input id="imap_hostname" name="imap_hostname" type="text" ng-model="settings.imap.host"/>
+            </fieldset>
+            <fieldset>
+                <label for="imap_port">Port</label>
+                <input id="imap_port" name="imap_port" type="text" ng-model="settings.imap.port"/>
+            </fieldset>
+            <fieldset>
+                <label for="imap_secure">Secure</label>
+                <input id="imap_secure" name="imap_secure" type="checkbox" ng-model="settings.imap.secure"/>
+            </fieldset>
+            <fieldset>
+                <label for="imap_username">User</label>
+                <input id="imap_username" name="imap_username" type="text" ng-model="settings.imap.username"/>
+            </fieldset>
+            <fieldset>
+                <label for="imap_password">Password</label>
+                <input id="imap_password" name="imap_password" type="password" ng-model="settings.imap.password"/>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="settings-item">
+        <h4>SMTP</h4>
+        <form action="#" method="get">
+            <fieldset>
+                <label for="smtp_hostname">Hostname</label>
+                <input id="smtp_hostname" name="smtp_hostname" type="text" ng-model="settings.smtp.host"/>
+            </fieldset>
+            <fieldset>
+                <label for="smtp_port">Port</label>
+                <input id="smtp_port" name="smtp_port" type="text" ng-model="settings.smtp.port"/>
+            </fieldset>
+            <fieldset>
+                <label for="smtp_secure">Secure</label>
+                <input id="smtp_secure" name="smtp_secure" type="checkbox" ng-model="settings.smtp.secure"/>
+            </fieldset>
+            <fieldset>
+                <label for="smtp_username">User</label>
+                <input id="smtp_username" name="smtp_username" type="text" ng-model="settings.smtp.username"/>
+            </fieldset>
+            <fieldset>
+                <label for="smtp_password">Password</label>
+                <input id="smtp_password" name="smtp_password" type="password" ng-model="settings.smtp.password"/>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="settings-item">
+        <h4>PASSWORD RESET</h4>
+        <form action="#" method="get">
+            <fieldset>
+                <label for="old_password">Old</label>
+                <input id="old_password" name="old_password" type="password" ng-model="settings.oldPassword"/>
+            </fieldset>
+            <fieldset>
+                <label for="new_password">New</label>
+                <input id="new_password" name="new_password" type="password" ng-model="settings.newPassword"/>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="settings-item">
+        <button class="primary-button" ng-if="!saving" ng-click="save()">save</button>
+        <img src="img/spinner.gif" ng-if="saving"/>
+    </div>
+
+</div>

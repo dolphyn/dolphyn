@@ -1,0 +1,39 @@
+{
+  "name": "dolphyn",
+  "version": "0.1.0",
+  "description": "Web based mail client",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nherment/dolphyn.git"
+  },
+  "keywords": [
+    "mail",
+    "webmail",
+    "imap",
+    "smtp"
+  ],
+  "author": "Nicolas Herment <nherment@arkhaios.net>",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/nherment/dolphyn/issues"
+  },
+  "dependencies": {
+    "express": "~3.4.0",
+    "socket.io": "~0.9.16",
+    "imap": "~0.8.3",
+    "serial": "0.0.6",
+    "mongodb": "~1.3.19",
+    "underscore": "~1.5.2",
+    "uuid": "~1.4.1",
+    "mailparser": "~0.3.6",
+    "html-css-sanitizer": "0.0.3",
+    "optimist": "~0.6.0",
+    "nodemailer": "~0.5.3",
+    "cookie": "~0.1.0",
+    "connect": "~2.9.1"
+  }
+}

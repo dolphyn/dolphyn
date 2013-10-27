@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "Helvetica-Neue";
+    src: url('fonts/HelveticaNeue.eot');
+    src: url('fonts/HelveticaNeue.eot?#iefix') format('embedded-opentype'),
+    url('fonts/HelveticaNeue.svg#Helvetica Neue') format('svg'),
+    url('fonts/HelveticaNeue.woff') format('woff'),
+    url('fonts/HelveticaNeue.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Helvetica-Neue-Medium";
+    src: url('fonts/HelveticaNeueMedium.eot');
+    src: url('fonts/HelveticaNeueMedium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/HelveticaNeueMedium.svg#Helvetica Neue') format('svg'),
+    url('fonts/HelveticaNeueMedium.woff') format('woff'),
+    url('fonts/HelveticaNeueMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Helvetica-Neue-Bold";
+    src: url('fonts/HelveticaNeueBold.eot');
+    src: url('fonts/HelveticaNeueBold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/HelveticaNeueBold.svg#Helvetica Neue') format('svg'),
+    url('fonts/HelveticaNeueBold.woff') format('woff'),
+    url('fonts/HelveticaNeueBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

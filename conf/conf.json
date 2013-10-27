@@ -1,0 +1,14 @@
+{
+  "database": {
+    "host": "localhost",
+    "port": 27017,
+    "name": "arkhaios-mail",
+    "user": "arkhaios-mail",
+    "password": "arkhaios-mail"
+  },
+  "application": {
+    "allowAccountCreation": false,
+    "hashAlgorithmIterations": 1,
+    "port": 3000
+  }
+}

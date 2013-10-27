@@ -1,0 +1,46 @@
+
+<div class="middle-column">
+    <div class="title">
+        <h1>Inbox</h1>
+        <input type="text"/>
+    </div>
+    <ol>
+        <li class="email-header"
+            ng-repeat="message in messages"
+            ng-click="getMessage(message)"
+            ng-class="{'email-header-unread': message.isUnread, 'email-header-selected': message.seqno == selectedMessage.seqno}">
+            <div class="email-header-from">
+                <input class="regular-checkbox" type="checkbox"/>
+                <h5>{{message.from[0].name}}</h5>
+            </div>
+            <div class="email-header-subject">
+                <h4>{{message.subject}}</h4>
+            </div>
+        </li>
+    </ol>
+
+    <div class="load-more">
+        <button id="loadMoreMail" class="secondary-button" ng-if="!loading" ng-click="loadMore()">LOAD MORE</button>
+        <img class="spinner" src="img/spinner.gif" ng-if="loading"/>
+    </div>
+</div>
+<div class="email-content-header">
+    <h1 class="email-content-title">{{selectedMessage.subject}}</h1>
+</div>
+<div class="content">
+    <div class="email-content-subtitle">
+        From <span class="email-content-from">{{selectedMessage.from[0].name}}</span>
+        <div class="email-content-right">
+            <span class="date">Today, 12:45</span>
+            <div>
+                <img src="img/reply.png"/>
+                <img src="img/delete.png"/>
+            </div>
+        </div>
+    </div>
+    <div class="email-content-body">
+        <div>
+            <iframe seamless srcdoc="{{selectedMessage.trustedHtml}}"></iframe>
+        </div>
+    </div>
+</div>
