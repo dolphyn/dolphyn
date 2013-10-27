@@ -16,33 +16,38 @@ Quick Start
   make start
 ```
 
-Todo
-====
+Task list
+=========
 
-- create these TODOs as Github issues (once I have an internet connection)
-- ability to cancel account creation on the on-boarding screen
-- auto delete created account but not configured in 1 hour (lazily, don't cron it)
-- lost password capability
-- retrieve all unread mails on login
-- push new mail to the UI
-- in-page login feedback on failure (password & email)
-- mail read flag on read mail
-- ability to compose mail
-- new mail notif + auto load
-- ability to answer & answer all
-- quick reply box
-- ability to forward mail
-- manage attachments
-- settings feedback (dynamic UI, display errors)
-- display connection errors
-- conversations
-- attachment search capability
+- [ ] have the settings page have the same left menu as inboxes
+- [ ] have the ability to configure pagination (as end user)
+- [ ] add ability to choose the inbox behaviour: 'unread first' vs 'by date' (not sure I really want to give this ability)
+- [ ] remove the hack made to prevent loading the BoxCtrl twice on login
+- [ ] add 'about' link with page to contributors & licenses
+- [ ] flag mail as read should uncount the displayed unread email count
+- [ ] fix unwanted vertical scrollbar in the email body window :/
+- [ ] implement long lived sessions
+- [ ] ability to cancel account creation on the on-boarding screen
+- [ ] auto delete created account but not configured in 1 hour (lazily, don't cron it)
+- [ ] lost password capability
+- [ ] in-page login feedback on failure (password & email)
+- [ ] ability to compose mail
+- [ ] new mail notif + auto load
+- [ ] ability to answer & answer all
+- [ ] quick reply box
+- [ ] ability to forward mail
+- [ ] manage attachments
+- [ ] settings feedback (dynamic UI, display errors)
+- [ ] display connection errors
+- [ ] conversations
+- [ ] attachment search capability
+- [x] push new mail to the UI
+- [x] refactor the front-end to get rid of the HTTP APIs
+- [x] retrieve all unread mails on login
+- [x] mail read flag on read mail
+- [x] (nice) automated configuration for hash iterations during install wizard
+- [x] application setup wizard
 
-Done tasks (for motivation)
-===========================
-
-- (nice) automated configuration for hash iterations during install wizard
-- application setup wizard
 
 The Vision
 ==========
