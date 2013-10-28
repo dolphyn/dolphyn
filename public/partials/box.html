@@ -26,6 +26,8 @@
             <img class="spinner" src="/img/spinner.gif" ng-if="loading"/>
         </div>
     </div>
+
+
     <div class="email-content-header" ng-hide="edit">
         <h1 class="email-content-title">{{selectedMessage.subject}}</h1>
     </div>
@@ -43,6 +45,28 @@
         <div class="email-content-body">
             <div>
                 <iframe seamless srcdoc="{{selectedMessage.trustedHtml}}"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="email-content-header" ng-show="edit">
+        <label for="compose-subject">Subject</label><input id="compose-subject" class="email-content-title" ng-model="selectedMessage.subject"/>
+        <button class="primary-button send" ng-click="send()">SEND</button>
+    </div>
+    <div class="content" ng-show="edit">
+        <div class="email-content-subtitle">
+            <label for="compose-to">To</label><input id="compose-to" class="email-to" ng-model="selectedMessage.to"/>
+            <div class="email-content-right">
+                <div>
+                    <img src="/img/reply.png"/>
+                    <img src="/img/delete.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="email-content-body">
+            <div>
+                <textarea class="email-body" ng-model="selectedMessage.html"></textarea>
             </div>
         </div>
     </div>

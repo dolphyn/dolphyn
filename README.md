@@ -56,6 +56,7 @@ Task list
 - [x] mail read flag on read mail
 - [x] automated configuration for hash iterations during install wizard (nice)
 - [x] application setup wizard
+- [ ] the on-boarding is probably broken since the deletion of the HTTP endpoints and needs fixing.
 
 
 The Vision

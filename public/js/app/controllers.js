@@ -119,6 +119,9 @@ function LoginCtrl($scope, socket, $location, $log, $rootScope) {
 
 function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $log) {
 
+  $scope.messages = []
+  $scope.selectedMessage
+
   $log.log('BoxCtrl')
 
   function unreadCount(value) {
@@ -134,6 +137,14 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
 
   $scope.boxId = $routeParams.menu
 
+  if($routeParams.menu === 'Drafts') {
+    $scope.edit = true
+  }
+
+  if($routeParams.resource === 'new') {
+    $scope.selectedMessage = {}
+  }
+
   if($routeParams.menu) {
     $scope.title = $routeParams.menu[0]
     $scope.title += $routeParams.menu.slice(1).toLowerCase()
@@ -145,11 +156,6 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
   })
 
   var itemsPerRetrieve = 10
-
-  var paging = {
-    from: 0,
-    to: itemsPerRetrieve
-  }
 
   $scope.loadMore = function() {
     $log.info('loading more mail')
@@ -206,10 +212,10 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
 
       var messagesUids = seenMessagesUids.slice(
         currentMessageIndex,
-        Math.min(currentMessageIndex+10, seenMessagesUids.length)
+        Math.min(currentMessageIndex + itemsPerRetrieve, seenMessagesUids.length)
       )
 
-      currentMessageIndex += 10
+      currentMessageIndex += itemsPerRetrieve
 
       if(messagesUids.length > 0) {
         $log.info('> list:conversations '+JSON.stringify(messagesUids))
@@ -370,12 +376,21 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
     }
   }
 
-  $scope.messages = []
-  $scope.selectedMessage
-
   $scope.$on('$destroy', function (event) {
     socket.removeAllListeners();
   });
+
+  $scope.send = function() {
+
+    var message = {
+      to: $scope.selectedMessage.to.split(','),
+      subject: $scope.selectedMessage.subject,
+      html: $scope.selectedMessage.html
+    }
+
+    socket.emit('send:message', message)
+  }
+
 }
 
 var DateHumanize = {
