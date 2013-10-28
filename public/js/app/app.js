@@ -6,7 +6,7 @@ var app = angular.module('myApp', ['ngSanitize', 'ngRoute', 'myApp.filters', 'my
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.
       when('/login',          {templateUrl: '/partials/login.html',   controller: LoginCtrl}).
-      when('/box/:menuItem',  {templateUrl: '/partials/menu.html',   controller: MenuPageCtrl}).
+      when('/app/:menuItem',  {templateUrl: '/partials/menu.html',   controller: MenuPageCtrl}).
       when('/compose',        {templateUrl: '/partials/compose.html', controller: ComposeCtrl}).
       otherwise({redirectTo: '/login'});
   }]).

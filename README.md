@@ -20,6 +20,7 @@ Task list
 =========
 
 - [ ] ability to mark mail as unread (vertical bar clickable)
+- [ ] ability to configure boxes
 - [ ] UX enhance mail subject's readability
 - [ ] have the ability to configure pagination (as end user)
 - [ ] add ability to choose the inbox behaviour: 'unread first' vs 'by date' (not sure I really want to give this ability)
@@ -41,6 +42,7 @@ Task list
 - [ ] display connection errors
 - [ ] conversations
 - [ ] attachment search capability
+- [x] add support for 'Sent' 'Drafts' and 'Trash' mailboxes
 - [x] remove the hack made to prevent loading the BoxCtrl twice on login
 - [x] bug: current left menu not being shown as selected
 - [x] have the settings page have the same left menu as inboxes

@@ -97,7 +97,7 @@ function LoginCtrl($scope, socket, $location, $log, $rootScope) {
     } else {
       $log.info('authenticated')
       $rootScope.authenticated = true
-      $location.path('/box/Inbox')
+      $location.path('/app/INBOX')
     }
   })
 
@@ -131,8 +131,7 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
     return $scope.unreadCount
   }
 
-  $scope.boxId = $routeParams.menuItem[0]
-  $scope.boxId += $routeParams.menuItem.substr(1).toLowerCase()
+  $scope.boxId = $routeParams.menuItem
 
   $scope.$on('handleBroadcast', function() {
   })
@@ -164,11 +163,12 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
     socket.on('ready', function() {
       $rootScope.ready = true
       $log.info('< ready')
-      $log.info('> open:box [INBOX]')
-      socket.emit('open:box', 'INBOX')
+      $log.info('> open:box ['+$scope.boxId+']')
+      socket.emit('open:box', $scope.boxId)
     })
   } else {
-    socket.emit('open:box', 'INBOX')
+    $log.info('> open:box ['+$scope.boxId+']')
+    socket.emit('open:box', $scope.boxId)
   }
 
   socket.on('open:box', function(err, box) {

@@ -1,23 +1,23 @@
 
 <div class="left" ng-controller="MenuCtrl">
-    <button id="compose" class="primary-button compose" ng-click="$location.path('/box/Drafts/new')">COMPOSE MAIL</button>
+    <button id="compose" class="primary-button compose" ng-click="$location.path('/app/Drafts/new')">COMPOSE MAIL</button>
     <div class="menu">
         <ul>
-            <li ng-class="{'active': currentMenu=='Inbox'}">
-                <a href="/box/Inbox" ng-click="changeMenu('Inbox')">Inbox <span class="email-count" ng-if="unreadCount > 0">{{unreadCount}}</span></a>
+            <li ng-class="{'active': currentMenu=='INBOX'}">
+                <a href="/app/INBOX" ng-click="changeMenu('INBOX')">Inbox <span class="email-count" ng-if="unreadCount > 0">{{unreadCount}}</span></a>
             </li>
             <li ng-class="{'active': currentMenu=='Sent'}">
-                <a href="/box/Sent" ng-click="changeMenu('Sent')">Sent</a>
+                <a href="/app/Sent" ng-click="changeMenu('Sent')">Sent</a>
             </li>
             <li ng-class="{'active': currentMenu=='Drafts'}">
-                <a href="/box/Drafts" ng-click="changeMenu('Drafts')">Drafts</a>
+                <a href="/app/Drafts" ng-click="changeMenu('Drafts')">Drafts</a>
             </li>
             <li ng-class="{'active': currentMenu=='Trash'}">
-                <a href="/box/Trash" ng-click="changeMenu('Trash')">Trash</a>
+                <a href="/app/Trash" ng-click="changeMenu('Trash')">Trash</a>
             </li>
             <li class="pure-menu-separator"><hr/></li>
             <li ng-class="{'active': currentMenu=='Settings'}">
-                <a href="/box/Settings" class="secondary" ng-click="changeMenu('Settings')">SETTINGS</a>
+                <a href="/app/Settings" class="secondary" ng-click="changeMenu('Settings')">SETTINGS</a>
             </li>
             <li>
                 <a href="/logout" class="secondary" href="/logout" ng-click="logout()">LOGOUT</a>
