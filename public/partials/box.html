@@ -1,31 +1,5 @@
 
-<div class="left" ng-controller="MenuCtrl">
-    <a href="/box/Drafts/new" id="compose" class="compose primary-button">COMPOSE MAIL</a>
-    <div class="menu">
-        <ul>
-            <li ng-class="{'active': currentMenu=='Inbox'}">
-                <a href="/box/Inbox" ng-click="changeMenu('Inbox')">Inbox <span class="email-count" ng-if="unreadCount > 0">{{unreadCount}}</span></a>
-            </li>
-            <li ng-class="{'active': currentMenu=='Sent'}">
-                <a href="/box/Sent" ng-click="changeMenu('Sent')">Sent</a>
-            </li>
-            <li ng-class="{'active': currentMenu=='Drafts'}">
-                <a href="/box/Drafts" ng-click="changeMenu('Drafts')">Drafts</a>
-            </li>
-            <li ng-class="{'active': currentMenu=='Trash'}">
-                <a href="/box/Trash" ng-click="changeMenu('Trash')">Trash</a>
-            </li>
-            <li class="pure-menu-separator"><hr/></li>
-            <li ng-class="{'active': currentMenu=='Settings'}">
-                <a href="/settings" class="secondary" ng-click="changeMenu('Settings')">SETTINGS</a>
-            </li>
-            <li>
-                <a href="/logout" class="secondary" href="/logout" ng-click="logout()">LOGOUT</a>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="emails">
+<div class="emails" ng-controller="BoxCtrl">
 
     <div class="middle-column">
         <div class="title">

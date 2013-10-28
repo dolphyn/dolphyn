@@ -2,10 +2,9 @@
 
 /* Controllers */
 
-app.controller('MenuCtrl', function($scope, socket, $sce, $routeParams, menuService) {
+app.controller('MenuCtrl', function($scope, $log, $routeParams, $location, menuService) {
 
-  $scope.currentMenu = getCurrentMenu()
-
+  $scope.currentMenu = $routeParams.menuItem
   $scope.unreadCount = ''
 
   $scope.$on('handleBroadcast', function() {
@@ -17,21 +16,6 @@ app.controller('MenuCtrl', function($scope, socket, $sce, $routeParams, menuServ
       }
     }
   })
-
-  function getCurrentMenu() {
-    var url = $.url()
-    var anchor = url.attr('anchor')
-    if(anchor) {
-      // TODO: be more strict with this regexp
-      var neverKnewHowToNameThis = anchor.match(/(\w+)/gmi)
-      if(neverKnewHowToNameThis && neverKnewHowToNameThis.length > 1) {
-        return neverKnewHowToNameThis[1]
-      } else {
-        return neverKnewHowToNameThis[0]
-      }
-
-    }
-  }
 
   $scope.changeMenu = function(menu) {
     $scope.currentMenu = menu
@@ -48,6 +32,7 @@ function AppCtrl($scope, socket, $routeParams, $location, menuService) {
 }
 
 function SettingsCtrl($scope, socket, $sce, $log) {
+  $log.info('SettingsCtrl')
 
   $scope.saving = false
 
@@ -76,6 +61,12 @@ function SettingsCtrl($scope, socket, $sce, $log) {
     socket.emit("save:settings", $scope.settings)
     return false
   }
+
+  $scope.$on('$destroy', function (event) {
+    socket.removeAllListeners();
+    // or something like
+    // socket.removeListener(this);
+  });
 }
 
 function ComposeCtrl($scope, socket, $sce, $routeParams, menuService) {
@@ -109,16 +100,25 @@ function LoginCtrl($scope, socket, $location, $log, $rootScope) {
       $location.path('/box/Inbox')
     }
   })
+
+  $scope.$on('$destroy', function (event) {
+    socket.removeAllListeners();
+  });
 }
 
-function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, $location, menuService, $log) {
+function MenuPageCtrl($scope, $routeParams, $log) {
+  $log.info('MenuPageCtrl:' + $routeParams.menuItem)
+
+  if($routeParams.menuItem === 'Settings') {
+    $scope.template = '/partials/settings.html'
+  } else {
+    $scope.template = '/partials/box.html'
+  }
+}
+
+function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $log) {
 
   $log.log('BoxCtrl')
-
-  if(!$rootScope.authenticated) {
-    $log.info('not authenticated')
-    return
-  }
 
   function unreadCount(value) {
     if(value !== undefined) {
@@ -131,8 +131,8 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, $location, menu
     return $scope.unreadCount
   }
 
-  $scope.boxId = $routeParams.boxId[0]
-  $scope.boxId += $routeParams.boxId.substr(1).toLowerCase()
+  $scope.boxId = $routeParams.menuItem[0]
+  $scope.boxId += $routeParams.menuItem.substr(1).toLowerCase()
 
   $scope.$on('handleBroadcast', function() {
   })
@@ -363,4 +363,8 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, $location, menu
 
   $scope.messages = []
   $scope.selectedMessage
+
+  $scope.$on('$destroy', function (event) {
+    socket.removeAllListeners();
+  });
 }

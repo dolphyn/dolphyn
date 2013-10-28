@@ -27,10 +27,11 @@ hr {
   border-color: #DDDDDD;
 }
 
-.compose {
-  width: 140px;
+#compose {
+  width: 150px;
   height: 30px;
   display: block;
+  font-size: 0.8em;
 }
 
 .menu > ul {

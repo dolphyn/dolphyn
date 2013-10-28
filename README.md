@@ -19,10 +19,10 @@ Quick Start
 Task list
 =========
 
-- [ ] have the settings page have the same left menu as inboxes
+- [ ] ability to mark mail as unread (vertical bar clickable)
+- [ ] UX enhance mail subject's readability
 - [ ] have the ability to configure pagination (as end user)
 - [ ] add ability to choose the inbox behaviour: 'unread first' vs 'by date' (not sure I really want to give this ability)
-- [ ] remove the hack made to prevent loading the BoxCtrl twice on login
 - [ ] add 'about' link with page to contributors & licenses
 - [ ] flag mail as read should uncount the displayed unread email count
 - [ ] fix unwanted vertical scrollbar in the email body window :/
@@ -41,11 +41,14 @@ Task list
 - [ ] display connection errors
 - [ ] conversations
 - [ ] attachment search capability
+- [x] remove the hack made to prevent loading the BoxCtrl twice on login
+- [x] bug: current left menu not being shown as selected
+- [x] have the settings page have the same left menu as inboxes
 - [x] push new mail to the UI
 - [x] refactor the front-end to get rid of the HTTP APIs
 - [x] retrieve all unread mails on login
 - [x] mail read flag on read mail
-- [x] (nice) automated configuration for hash iterations during install wizard
+- [x] automated configuration for hash iterations during install wizard (nice)
 - [x] application setup wizard
 
 
