@@ -3,8 +3,8 @@
 
     <div class="middle-column">
         <div class="title">
-            <h1>Inbox</h1>
-            <input type="text"/>
+            <h1>{{title}}</h1>
+            <input type="text" placeholder="Search" name="search" class="search"/>
         </div>
         <ol>
             <li class="email-header"
@@ -26,14 +26,14 @@
             <img class="spinner" src="/img/spinner.gif" ng-if="loading"/>
         </div>
     </div>
-    <div class="email-content-header">
+    <div class="email-content-header" ng-hide="edit">
         <h1 class="email-content-title">{{selectedMessage.subject}}</h1>
     </div>
-    <div class="content">
-        <div class="email-content-subtitle">
+    <div class="content" ng-hide="edit">
+        <div class="email-content-subtitle" ng-show="selectedMessage">
             From <span class="email-content-from">{{selectedMessage.from[0].name}}</span>
             <div class="email-content-right">
-                <span class="date">Today, 12:45</span>
+                <span class="date">{{selectedMessage.readableDate}}</span>
                 <div>
                     <img src="/img/reply.png"/>
                     <img src="/img/delete.png"/>

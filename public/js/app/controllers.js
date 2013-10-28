@@ -2,9 +2,9 @@
 
 /* Controllers */
 
-app.controller('MenuCtrl', function($scope, $log, $routeParams, $location, menuService) {
+function MenuCtrl($scope, $log, $routeParams, $location, menuService) {
 
-  $scope.currentMenu = $routeParams.menuItem
+  $scope.currentMenu = $routeParams.menu
   $scope.unreadCount = ''
 
   $scope.$on('handleBroadcast', function() {
@@ -17,11 +17,23 @@ app.controller('MenuCtrl', function($scope, $log, $routeParams, $location, menuS
     }
   })
 
+  $scope.compose = function() {
+    $location.path('/app/Drafts/new')
+  }
+
   $scope.changeMenu = function(menu) {
     $scope.currentMenu = menu
   }
 
-})
+  $log.info('MenuPageCtrl:' + $routeParams.menu)
+
+  if($routeParams.menu === 'Account') {
+    $scope.template = '/partials/account.html'
+  } else {
+    $scope.template = '/partials/box.html'
+  }
+
+}
 
 function AppCtrl($scope, socket, $routeParams, $location, menuService) {
   socket.on('unauth:user', function() {
@@ -47,7 +59,6 @@ function SettingsCtrl($scope, socket, $sce, $log) {
   socket.on('error:settings', function (err) {
     $log.error(err)
     $scope.saving = false
-    console.log(err)
   })
 
   socket.on('ok:settings', function () {
@@ -97,23 +108,13 @@ function LoginCtrl($scope, socket, $location, $log, $rootScope) {
     } else {
       $log.info('authenticated')
       $rootScope.authenticated = true
-      $location.path('/app/INBOX')
+      $location.path('/app/INBOX/ALL')
     }
   })
 
   $scope.$on('$destroy', function (event) {
     socket.removeAllListeners();
   });
-}
-
-function MenuPageCtrl($scope, $routeParams, $log) {
-  $log.info('MenuPageCtrl:' + $routeParams.menuItem)
-
-  if($routeParams.menuItem === 'Settings') {
-    $scope.template = '/partials/settings.html'
-  } else {
-    $scope.template = '/partials/box.html'
-  }
 }
 
 function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $log) {
@@ -131,7 +132,14 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
     return $scope.unreadCount
   }
 
-  $scope.boxId = $routeParams.menuItem
+  $scope.boxId = $routeParams.menu
+
+  if($routeParams.menu) {
+    $scope.title = $routeParams.menu[0]
+    $scope.title += $routeParams.menu.slice(1).toLowerCase()
+  } else {
+    $scope.title = ''
+  }
 
   $scope.$on('handleBroadcast', function() {
   })
@@ -303,18 +311,19 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
         message.trustedHtml = $sce.trustAsHtml(messageWithBody.html)
       }
 
+      message.readableDate = DateHumanize.humanize(new Date(message.headers.date))
+
       // replace in the message list instead of selectedMessage
       $scope.selectedMessage = message
     }
   })
 
   socket.on('read:message', function(ack) {
-    console.log(ack)
     var message = lookupMessage(ack.messageUid)
     if(message && !ack.ok) {
       message.isUnread = true
     } else if(message) {
-      console.log('message marked as read')
+      $log.info('marking message ['+ack.messageUid+'] as read')
       message.isUnread = false
     } else {
       throw new Error('Could not match message')
@@ -367,4 +376,83 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
   $scope.$on('$destroy', function (event) {
     socket.removeAllListeners();
   });
+}
+
+var DateHumanize = {
+
+  humanize: function(date) {
+    var dayName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    var monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+    var now = new Date()
+
+    var dateString = ''
+
+
+
+    if(date.getFullYear() !== now.getFullYear()) {
+
+      if(date.getMonth() !== now.getMonth()) {
+
+        dateString += monthName[date.getMonth()]
+        dateString += ' ' + formatDay(date.getDate())
+      }
+
+      dateString += ', ' + date.getFullYear()
+
+    } else {
+
+      if(date.getMonth() !== now.getMonth()) {
+
+        dateString += monthName[date.getMonth()]
+        dateString += ' ' + formatDay(date.getDate())
+        dateString += ', ' + formatTime(date)
+
+      } else {
+
+        if(date.getDate() <= (now.getDate() - 2)) {
+          dateString += dayName[date.getDay()]
+          dateString += ', ' + formatDay(date.getDate())
+        } else {
+          dateString += (date.getDate() == now.getDate()) ? 'Today' : 'Yesterday'
+          dateString += ', ' + formatTime(date)
+        }
+
+      }
+
+      return dateString
+    }
+
+    function formatDay(day) {
+      switch(day) {
+        case 1:
+        case 21:
+        case 31:
+          return day + 'st'
+        case 2:
+        case 22:
+          return day + 'nd'
+        case 3:
+        case 23:
+          return day + 'rd'
+        default:
+          return day + 'th'
+      }
+    }
+
+    function formatTime(date) {
+      var readableTime = ''
+
+      readableTime += date.getHours() + ':'
+
+      if(date.getMinutes() < 10) {
+        readableTime += '0'
+      }
+
+      readableTime += date.getMinutes()
+
+      return readableTime
+    }
+  }
+
 }

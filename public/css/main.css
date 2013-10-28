@@ -7,6 +7,10 @@ body {
   font-family: "Quicksand-Regular", sans-serif;
 }
 
+button:focus {
+  outline: none;
+}
+
 .left {
   overflow:   auto;
   position:   absolute;
@@ -373,3 +377,21 @@ input {
   padding: 4px;
   /*width: 384px;*/
 }
+
+input.search {
+  float: right;
+  margin-right: 20px;
+  padding: 5px;
+  width: 250px;
+  display: inline-block;
+  height: 30px;
+  border: solid #DDDDDD 1px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: inherit;
+}
+
+
+
+
+

@@ -19,6 +19,10 @@ Quick Start
 Task list
 =========
 
+- [ ] extract DateHumanize from the 'controllers.js' file
+- [x] show date when showing message
+- [ ] separate controllers in multiple files. lazy load them.
+- [ ] when retrieving mail from backend, merge instead of replacing
 - [ ] ability to mark mail as unread (vertical bar clickable)
 - [ ] ability to configure boxes
 - [ ] UX enhance mail subject's readability
@@ -40,7 +44,7 @@ Task list
 - [ ] manage attachments
 - [ ] settings feedback (dynamic UI, display errors)
 - [ ] display connection errors
-- [ ] conversations
+- [ ] implement conversations
 - [ ] attachment search capability
 - [x] add support for 'Sent' 'Drafts' and 'Trash' mailboxes
 - [x] remove the hack made to prevent loading the BoxCtrl twice on login
