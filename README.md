@@ -59,6 +59,7 @@ Task list
 - [ ] the on-boarding is probably broken since the deletion of the HTTP endpoints and needs fixing.
 - [ ] support the yubikey
 - [ ] encrypt imap & smtp credentials
+- [ ] use [Primus](https://github.com/primus/primus) instead of socket.io
 
 
 The Vision
@@ -86,13 +87,14 @@ SMTP is inherently insecure, even with GPG metadata is not secure.
 Make mails metadata secure, ie. preventing a third party from knowing who exchanges mails. There are technologies that
 allow anonymous networking where a single node does not know who sent the packet or who it is for.
 
-### Do not reproduce Lavabit
+### Be open
+
+It is sad that ** Lavabit ** shut down. It would have continued on though if it were open source.
 
 Internet is made to be decentralized and your secure mail should be a service that you own. You can also use a web
 service if you wish.
 
 Open source has shown it is possible to free your work and still have efficient business models.
-
 
 I would like to head towards such vision in 3 stages:
 
