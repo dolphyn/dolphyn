@@ -19,33 +19,33 @@ Quick Start
 Task list
 =========
 
-- [ ] extract DateHumanize from the 'controllers.js' file
+- [ ] extract DateHumanize from the 'controllers.js' file #refactor
 - [x] show date when showing message
-- [ ] separate controllers in multiple files. lazy load them.
-- [ ] when retrieving mail from backend, merge instead of replacing
-- [ ] ability to mark mail as unread (vertical bar clickable)
-- [ ] ability to configure boxes
-- [ ] UX enhance mail subject's readability
-- [ ] have the ability to configure pagination (as end user)
-- [ ] add ability to choose the inbox behaviour: 'unread first' vs 'by date' (not sure I really want to give this ability)
-- [ ] add 'about' link with page to contributors & licenses
-- [ ] flag mail as read should uncount the displayed unread email count
-- [ ] fix unwanted vertical scrollbar in the email body window :/
-- [ ] implement long lived sessions
-- [ ] ability to cancel account creation on the on-boarding screen
-- [ ] auto delete created account but not configured in 1 hour (lazily, don't cron it)
-- [ ] lost password capability
-- [ ] in-page login feedback on failure (password & email)
-- [ ] ability to compose mail
-- [ ] new mail notif + auto load
-- [ ] ability to answer & answer all
-- [ ] quick reply box
-- [ ] ability to forward mail
-- [ ] manage attachments
-- [ ] settings feedback (dynamic UI, display errors)
-- [ ] display connection errors
-- [ ] implement conversations
-- [ ] attachment search capability
+- [ ] separate controllers in multiple files. lazy load them. #refactor
+- [ ] when retrieving mail from backend, merge instead of replacing #bug
+- [ ] ability to mark mail as unread (vertical bar clickable) #feature
+- [ ] ability to configure boxes #feature
+- [ ] UX enhance mail subject's readability #feature
+- [ ] have the ability to configure pagination (as end user) #feature
+- [ ] add ability to choose the inbox behaviour: 'unread first' vs 'by date' (not sure I really want to give this ability) #feature
+- [ ] add 'about' link with page to contributors & licenses #feature
+- [ ] flag mail as read should uncount the displayed unread email count #bug
+- [ ] fix unwanted vertical scrollbar in the email body window :/ #bug
+- [ ] implement long lived sessions #feature
+- [ ] ability to cancel account creation on the on-boarding screen #feature
+- [ ] auto delete created account but not configured in 1 hour (lazily, don't cron it) #feature
+- [ ] lost password capability #feature #sec
+- [ ] in-page login feedback on failure (password & email) #feature
+- [ ] ability to compose mail #feature
+- [ ] new mail notif + auto load #feature
+- [ ] ability to answer & answer all #feature
+- [ ] quick reply box #feature
+- [ ] ability to forward mail #feature
+- [ ] manage attachments #feature
+- [ ] settings feedback (dynamic UI, display errors) #feature
+- [ ] display connection errors #feature
+- [ ] implement conversations #feature
+- [ ] attachment search capability #feature
 - [x] add support for 'Sent' 'Drafts' and 'Trash' mailboxes
 - [x] remove the hack made to prevent loading the BoxCtrl twice on login
 - [x] bug: current left menu not being shown as selected
@@ -56,10 +56,12 @@ Task list
 - [x] mail read flag on read mail
 - [x] automated configuration for hash iterations during install wizard (nice)
 - [x] application setup wizard
-- [ ] the on-boarding is probably broken since the deletion of the HTTP endpoints and needs fixing.
-- [ ] support the yubikey
-- [ ] encrypt imap & smtp credentials
-- [ ] use [Primus](https://github.com/primus/primus) instead of socket.io
+- [ ] the on-boarding is probably broken since the deletion of the HTTP endpoints and needs fixing. #bug
+- [~] support the yubikey #feature #sec
+- [x] encrypt imap & smtp credentials #sec #feature
+- [ ] use [Primus](https://github.com/primus/primus) instead of socket.io #refactor
+- [ ] imap disconnects after a while and do not automatically reconnects #bug
+- [ ] log account activity #sec #feature
 
 
 The Vision

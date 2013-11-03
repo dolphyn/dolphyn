@@ -9,7 +9,8 @@ function configure(IOHelper, callback) {
   var appConfig = {
     allowAccountCreation: false,
     hashAlgorithmIterations: 50000,
-    port: 3000
+    port: 3000,
+    resetPasswordTimeout: (24 * 3600 * 1000) // 24hrs
   }
 
   if(conf.application) {
@@ -29,6 +30,7 @@ function configure(IOHelper, callback) {
       {dataType: 'int', attr: 'port', message: 'HTTP port'},
       {dataType: 'boolean', attr: 'allowAccountCreation', message: 'Allow creation of new accounts'},
       {dataType: 'int', attr: 'hashAlgorithmIterations', message: 'Hash algorithm iterations'},
+      {dataType: 'int', attr: 'resetPasswordTimeout', message: 'Timeout for password reset validation (ms)'}
     ]
   }
 

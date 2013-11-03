@@ -1,4 +1,4 @@
-var Security = require('../lib/util/Security.js')
+var Security = require('../lib/auth/Security.js')
 
 var assert = require('assert')
 

@@ -34,6 +34,7 @@
     "optimist": "~0.6.0",
     "nodemailer": "~0.5.3",
     "cookie": "~0.1.0",
-    "connect": "~2.9.1"
+    "connect": "~2.9.1",
+    "yub": "~0.10.7"
   }
 }

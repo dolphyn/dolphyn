@@ -143,7 +143,7 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
     var editor = new wysihtml5.Editor("compose-body", { // id of textarea element
       toolbar:      "compose-body-toolbar", // id of toolbar element
       parserRules:  wysihtml5ParserRules, // defined in parser rules set
-//      stylesheets: ["/css/vendor/reset.css", "/css/vendor/editor.css"]
+      stylesheets: ["/css/vendor/stylesheet.css"]
     })
   }
 
