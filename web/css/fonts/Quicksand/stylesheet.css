@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Quicksand-Bold';
+    src: url('Quicksand-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand-BoldItalic';
+    src: url('Quicksand-BoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Quicksand-Light';
+    src: url('Quicksand-Light.otf') format('opentype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand-LightItalic';
+    src: url('Quicksand-LightItalic.otf') format('opentype');
+    font-weight: lighter;
+    font-style: italic;
+}
+
+@font-face {
+  font-family: 'Quicksand-Regular';
+  src: url('Quicksand-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand-Italic';
+  src: url('Quicksand-Italic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Quicksand-Dash';
+    src: url('Quicksand-Dash.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+

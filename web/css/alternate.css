@@ -1,0 +1,104 @@
+
+body {
+  background: #38454C;
+  color: #FDFDFD;
+  overflow: auto;
+  font-family: "Quicksand-Light", sans-serif;
+}
+
+a, a:visited, a:focus {
+  color: #F0F0F0;
+}
+a:hover {
+  color: #4282B1;
+}
+
+.center {
+  top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  width: 500px;
+}
+
+.center form {
+  display: block;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+}
+
+h3 {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  font-size: 2.1em;
+  font-family: "Quicksand-Light", sans-serif;
+  color: #D3E3EC;
+}
+
+h4 {
+  position: relative;
+  font-size: 2em;
+  margin: 10px 0px 20px 0px;
+  padding: 0px 0px 5px 0px;
+  border-bottom: solid #4282B1 1px;
+  font-family: "Quicksand-Light", sans-serif;
+  color: #A3B3BC;
+}
+
+fieldset {
+  position: relative;
+  display: block;
+  margin: 20px 0px 20px 0px;
+  padding: 0px;
+  border: none;
+}
+
+label,
+input {
+  cursor: pointer;
+}
+
+.center form fieldset label {
+  display: inline-block;
+  width: 100px;
+}
+.center form fieldset label,
+.center form fieldset input[type=text],
+.center form fieldset input[type=password] {
+  border-radius: 3px;
+  border: none;
+  height: 1.1em;
+  font-size: 1.1em;
+}
+.center form fieldset input[type=text],
+.center form fieldset input[type=password] {
+  background-color: #DFDFDF;
+}
+
+.primary-button {
+  font-family: "Quicksand-Regular", sans-serif;
+  padding: 5px 20px;
+  font-size: 1.1em;
+  float: right;
+  cursor: pointer;
+}
+
+.center form input[type=submit] {
+  float: right;
+  margin-top: 10px;
+  max-width: 100px;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+.center form fieldset input {
+  display: inline-block;
+  text-align: left;
+  padding: 4px;
+  width: 386px;
+}

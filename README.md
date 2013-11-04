@@ -3,14 +3,14 @@ Dolphyn Mail: The Beautiful WebMail
 
 It is not usable yet. ** Dolphyn Mail ** is still in progress.
 
-![Screenshot](https://raw.github.com/nherment/dolphyn/master/docs/design/simple_mail.png "Screenshot")
+![Screenshot](https://raw.github.com/dolphyn/dolphyn/master/docs/design/simple_mail.png "Screenshot")
 
 Quick Start
 ===========
 
 ```
   [Install node.js](http://nodejs.org/download/)
-  git clone https://github.com/nherment/dolphyn.git
+  git clone https://github.com/dolphyn/dolphyn.git
   cd dolphyn
   make install
   make start
@@ -62,6 +62,10 @@ Task list
 - [ ] use [Primus](https://github.com/primus/primus) instead of socket.io #refactor
 - [ ] imap disconnects after a while and do not automatically reconnects #bug
 - [ ] log account activity #sec #feature
+- [ ] update encryption when password changes
+- [ ] encryption should be based on multi factor authentication when it is activated
+- [ ] support google like TOTP
+- [ ] support SMS 2 factor auth
 
 
 The Vision
@@ -136,7 +140,7 @@ License(s)
 Dolphyn Mail mail is governed by 3 licenses. It is very important for me to keep Dolphyn Mail mail an open source,
 business friendly application. Having said that should not stop you from reading the licenses:
 
-The [Source Code License (MIT)](https://github.com/nherment/dolphyn/blob/master/LICENSE.md) covers the source
-code, the [Design License (CC Attribution 3.0)](https://github.com/nherment/dolphyn/blob/master/docs/design/LICENSE_SIMPLE_MAIL.md)
-covers the UI and the [Font License (SIL OPEN FONT LICENSE)](https://github.com/nherment/dolphyn/blob/master/public/css/fonts/Quicksand/LICENSE.md)
+The [Source Code License (MIT)](https://github.com/dolphyn/dolphyn/blob/master/LICENSE.md) covers the source
+code, the [Design License (CC Attribution 3.0)](https://github.com/dolphyn/dolphyn/blob/master/docs/design/LICENSE_SIMPLE_MAIL.md)
+covers the UI and the [Font License (SIL OPEN FONT LICENSE)](https://github.com/dolphyn/dolphyn/blob/master/public/css/fonts/Quicksand/LICENSE.md)
 covers the Quicksand font that the webmail uses.
