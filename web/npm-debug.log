@@ -1,0 +1,1145 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'express' ]
+2 info using npm@1.2.32
+3 info using node@v0.10.12
+4 verbose read json /Users/nherment/workspace/dolphyn/package.json
+5 verbose read json /Users/nherment/workspace/dolphyn/node_modules/connect/package.json
+6 verbose read json /Users/nherment/workspace/dolphyn/node_modules/cookie/package.json
+7 verbose read json /Users/nherment/workspace/dolphyn/node_modules/html-css-sanitizer/package.json
+8 verbose read json /Users/nherment/workspace/dolphyn/node_modules/imap/package.json
+9 verbose read json /Users/nherment/workspace/dolphyn/node_modules/mailparser/package.json
+10 verbose read json /Users/nherment/workspace/dolphyn/node_modules/mongodb/package.json
+11 verbose read json /Users/nherment/workspace/dolphyn/node_modules/nodemailer/package.json
+12 verbose read json /Users/nherment/workspace/dolphyn/node_modules/optimist/package.json
+13 verbose read json /Users/nherment/workspace/dolphyn/node_modules/serial/package.json
+14 verbose read json /Users/nherment/workspace/dolphyn/node_modules/socket.io/package.json
+15 verbose read json /Users/nherment/workspace/dolphyn/node_modules/underscore/package.json
+16 verbose read json /Users/nherment/workspace/dolphyn/node_modules/uuid/package.json
+17 verbose read json /Users/nherment/workspace/dolphyn/node_modules/yub/package.json
+18 verbose from cache /Users/nherment/workspace/dolphyn/package.json
+19 verbose readDependencies using package.json deps
+20 verbose cache add [ 'express@~3.4.0', null ]
+21 verbose cache add name=undefined spec="express@~3.4.0" args=["express@~3.4.0",null]
+22 verbose parsed url { protocol: null,
+22 verbose parsed url   slashes: null,
+22 verbose parsed url   auth: null,
+22 verbose parsed url   host: null,
+22 verbose parsed url   port: null,
+22 verbose parsed url   hostname: null,
+22 verbose parsed url   hash: null,
+22 verbose parsed url   search: null,
+22 verbose parsed url   query: null,
+22 verbose parsed url   pathname: 'express@~3.4.0',
+22 verbose parsed url   path: 'express@~3.4.0',
+22 verbose parsed url   href: 'express@~3.4.0' }
+23 verbose cache add name="express" spec="~3.4.0" args=["express","~3.4.0"]
+24 verbose parsed url { protocol: null,
+24 verbose parsed url   slashes: null,
+24 verbose parsed url   auth: null,
+24 verbose parsed url   host: null,
+24 verbose parsed url   port: null,
+24 verbose parsed url   hostname: null,
+24 verbose parsed url   hash: null,
+24 verbose parsed url   search: null,
+24 verbose parsed url   query: null,
+24 verbose parsed url   pathname: '~3.4.0',
+24 verbose parsed url   path: '~3.4.0',
+24 verbose parsed url   href: '~3.4.0' }
+25 verbose addNamed [ 'express', '~3.4.0' ]
+26 verbose addNamed [ null, '>=3.4.0- <3.5.0-' ]
+27 silly lockFile abb0077e-express-3-4-0 express@~3.4.0
+28 verbose lock express@~3.4.0 /Users/nherment/.npm/abb0077e-express-3-4-0.lock
+29 silly addNameRange { name: 'express', range: '>=3.4.0- <3.5.0-', hasData: false }
+30 verbose url raw express
+31 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+32 verbose url resolved https://registry.npmjs.org/express
+33 info trying registry request attempt 1 at 21:55:56
+34 verbose etag "3IFC3VSVCT6V2KZG8KCY270X4"
+35 http GET https://registry.npmjs.org/express
+36 info retry will retry, error on last attempt: Error: socket hang up
+37 info trying registry request attempt 2 at 21:56:31
+38 verbose etag "3IFC3VSVCT6V2KZG8KCY270X4"
+39 http GET https://registry.npmjs.org/express
+40 http 304 https://registry.npmjs.org/express
+41 silly registry.get cb [ 304,
+41 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+41 silly registry.get     etag: '"3IFC3VSVCT6V2KZG8KCY270X4"',
+41 silly registry.get     date: 'Mon, 04 Nov 2013 21:58:05 GMT',
+41 silly registry.get     'content-length': '0' } ]
+42 verbose etag express from cache
+43 silly addNameRange number 2 { name: 'express', range: '>=3.4.0- <3.5.0-', hasData: true }
+44 silly addNameRange versions [ 'express',
+44 silly addNameRange   [ '0.14.0',
+44 silly addNameRange     '0.14.1',
+44 silly addNameRange     '1.0.0',
+44 silly addNameRange     '1.0.1',
+44 silly addNameRange     '1.0.2',
+44 silly addNameRange     '1.0.3',
+44 silly addNameRange     '1.0.4',
+44 silly addNameRange     '1.0.5',
+44 silly addNameRange     '1.0.6',
+44 silly addNameRange     '1.0.7',
+44 silly addNameRange     '1.0.8',
+44 silly addNameRange     '2.0.0',
+44 silly addNameRange     '2.1.0',
+44 silly addNameRange     '2.1.1',
+44 silly addNameRange     '2.2.0',
+44 silly addNameRange     '2.2.1',
+44 silly addNameRange     '2.2.2',
+44 silly addNameRange     '2.3.0',
+44 silly addNameRange     '2.3.1',
+44 silly addNameRange     '2.3.2',
+44 silly addNameRange     '2.3.3',
+44 silly addNameRange     '2.3.4',
+44 silly addNameRange     '2.3.5',
+44 silly addNameRange     '2.3.6',
+44 silly addNameRange     '2.3.7',
+44 silly addNameRange     '2.3.8',
+44 silly addNameRange     '2.3.9',
+44 silly addNameRange     '2.3.10',
+44 silly addNameRange     '2.3.11',
+44 silly addNameRange     '2.3.12',
+44 silly addNameRange     '2.4.0',
+44 silly addNameRange     '2.4.1',
+44 silly addNameRange     '2.4.2',
+44 silly addNameRange     '2.4.3',
+44 silly addNameRange     '2.4.4',
+44 silly addNameRange     '2.4.5',
+44 silly addNameRange     '2.4.6',
+44 silly addNameRange     '2.4.7',
+44 silly addNameRange     '2.5.0',
+44 silly addNameRange     '2.5.1',
+44 silly addNameRange     '2.5.2',
+44 silly addNameRange     '2.5.3',
+44 silly addNameRange     '2.5.4',
+44 silly addNameRange     '2.5.5',
+44 silly addNameRange     '2.5.6',
+44 silly addNameRange     '2.5.7',
+44 silly addNameRange     '2.5.8',
+44 silly addNameRange     '2.5.9',
+44 silly addNameRange     '2.5.10',
+44 silly addNameRange     '2.5.11',
+44 silly addNameRange     '3.0.0',
+44 silly addNameRange     '3.0.1',
+44 silly addNameRange     '3.0.2',
+44 silly addNameRange     '3.0.3',
+44 silly addNameRange     '3.0.4',
+44 silly addNameRange     '3.0.5',
+44 silly addNameRange     '3.0.6',
+44 silly addNameRange     '3.1.0',
+44 silly addNameRange     '3.1.1',
+44 silly addNameRange     '3.1.2',
+44 silly addNameRange     '3.2.0',
+44 silly addNameRange     '3.2.1',
+44 silly addNameRange     '3.2.2',
+44 silly addNameRange     '3.2.3',
+44 silly addNameRange     '3.2.4',
+44 silly addNameRange     '3.2.5',
+44 silly addNameRange     '3.2.6',
+44 silly addNameRange     '3.3.0',
+44 silly addNameRange     '3.3.1',
+44 silly addNameRange     '3.3.2',
+44 silly addNameRange     '3.3.3',
+44 silly addNameRange     '3.3.4',
+44 silly addNameRange     '3.3.5',
+44 silly addNameRange     '3.3.6',
+44 silly addNameRange     '1.0.0-beta',
+44 silly addNameRange     '1.0.0-beta2',
+44 silly addNameRange     '1.0.0-rc',
+44 silly addNameRange     '1.0.0-rc2',
+44 silly addNameRange     '1.0.0-rc3',
+44 silly addNameRange     '1.0.0-rc4',
+44 silly addNameRange     '2.0.0-beta',
+44 silly addNameRange     '2.0.0-beta2',
+44 silly addNameRange     '2.0.0-beta3',
+44 silly addNameRange     '2.0.0-rc',
+44 silly addNameRange     '2.0.0-rc2',
+44 silly addNameRange     '2.0.0-rc3',
+44 silly addNameRange     '3.0.0-alpha1',
+44 silly addNameRange     '3.0.0-alpha2',
+44 silly addNameRange     '3.0.0-alpha3',
+44 silly addNameRange     '3.0.0-alpha4',
+44 silly addNameRange     '3.0.0-alpha5',
+44 silly addNameRange     '3.0.0-beta1',
+44 silly addNameRange     '3.0.0-beta2',
+44 silly addNameRange     '3.0.0-beta3',
+44 silly addNameRange     '3.0.0-beta4',
+44 silly addNameRange     '3.0.0-beta6',
+44 silly addNameRange     '3.0.0-beta7',
+44 silly addNameRange     '3.0.0-rc1',
+44 silly addNameRange     '3.0.0-rc2',
+44 silly addNameRange     '3.0.0-rc3',
+44 silly addNameRange     '3.0.0-rc4',
+44 silly addNameRange     '3.0.0-rc5',
+44 silly addNameRange     '3.3.7',
+44 silly addNameRange     '3.3.8',
+44 silly addNameRange     '3.4.0',
+44 silly addNameRange     '3.4.1',
+44 silly addNameRange     '3.4.2',
+44 silly addNameRange     '3.4.3',
+44 silly addNameRange     '3.4.4' ] ]
+45 verbose addNamed [ 'express', '3.4.4' ]
+46 verbose addNamed [ '3.4.4', '3.4.4' ]
+47 silly lockFile edcc27a2-express-3-4-4 express@3.4.4
+48 verbose lock express@3.4.4 /Users/nherment/.npm/edcc27a2-express-3-4-4.lock
+49 verbose read json /Users/nherment/.npm/express/3.4.4/package/package.json
+50 silly lockFile edcc27a2-express-3-4-4 express@3.4.4
+51 silly lockFile edcc27a2-express-3-4-4 express@3.4.4
+52 silly lockFile abb0077e-express-3-4-0 express@~3.4.0
+53 silly lockFile abb0077e-express-3-4-0 express@~3.4.0
+54 silly resolved [ { name: 'express',
+54 silly resolved     description: 'Sinatra inspired web development framework',
+54 silly resolved     version: '3.4.4',
+54 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+54 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+54 silly resolved     dependencies:
+54 silly resolved      { connect: '2.11.0',
+54 silly resolved        commander: '1.3.2',
+54 silly resolved        'range-parser': '0.0.4',
+54 silly resolved        mkdirp: '0.3.5',
+54 silly resolved        cookie: '0.1.0',
+54 silly resolved        'buffer-crc32': '0.2.1',
+54 silly resolved        fresh: '0.2.0',
+54 silly resolved        methods: '0.1.0',
+54 silly resolved        send: '0.1.4',
+54 silly resolved        'cookie-signature': '1.0.1',
+54 silly resolved        debug: '*' },
+54 silly resolved     devDependencies:
+54 silly resolved      { ejs: '*',
+54 silly resolved        mocha: '*',
+54 silly resolved        jade: '0.30.0',
+54 silly resolved        hjs: '*',
+54 silly resolved        stylus: '*',
+54 silly resolved        should: '2',
+54 silly resolved        'connect-redis': '*',
+54 silly resolved        marked: '*',
+54 silly resolved        supertest: '0.8.1 - 1' },
+54 silly resolved     keywords:
+54 silly resolved      [ 'express',
+54 silly resolved        'framework',
+54 silly resolved        'sinatra',
+54 silly resolved        'web',
+54 silly resolved        'rest',
+54 silly resolved        'restful',
+54 silly resolved        'router',
+54 silly resolved        'app',
+54 silly resolved        'api' ],
+54 silly resolved     repository: { type: 'git', url: 'git://github.com/visionmedia/express' },
+54 silly resolved     main: 'index',
+54 silly resolved     bin: { express: './bin/express' },
+54 silly resolved     scripts: { prepublish: 'npm prune', test: 'make test' },
+54 silly resolved     engines: { node: '*' },
+54 silly resolved     readme: '[![express logo](http://f.cl.ly/items/0V2S1n0K1i3y1c122g04/Screen%20Shot%202012-04-11%20at%209.59.42%20AM.png)](http://expressjs.com/)\n\n  Fast, unopinionated, minimalist web framework for [node](http://nodejs.org).\n\n  [![Build Status](https://secure.travis-ci.org/visionmedia/express.png)](http://travis-ci.org/visionmedia/express) [![Gittip](http://img.shields.io/gittip/visionmedia.png)](https://www.gittip.com/visionmedia/)\n\n```js\nvar express = require(\'express\');\nvar app = express();\n\napp.get(\'/\', function(req, res){\n  res.send(\'Hello World\');\n});\n\napp.listen(3000);\n```\n\n## Installation\n\n    $ npm install -g express\n\n## Quick Start\n\n The quickest way to get started with express is to utilize the executable `express(1)` to generate an application as shown below:\n\n Create the app:\n\n    $ npm install -g express\n    $ express /tmp/foo && cd /tmp/foo\n\n Install dependencies:\n\n    $ npm install\n\n Start the server:\n\n    $ node app\n\n## Features\n\n  * Built on [Connect](http://github.com/senchalabs/connect)\n  * Robust routing\n  * HTTP helpers (redirection, caching, etc)\n  * View system supporting 14+ template engines\n  * Content negotiation\n  * Focus on high performance\n  * Environment based configuration\n  * Executable for generating applications quickly\n  * High test coverage\n\n## Philosophy\n\n  The Express philosophy is to provide small, robust tooling for HTTP servers. Making\n  it a great solution for single page applications, web sites, hybrids, or public\n  HTTP APIs.\n\n  Built on Connect you can use _only_ what you need, and nothing more, applications\n  can be as big or as small as you like, even a single file. Express does\n  not force you to use any specific ORM or template engine. With support for over\n  14 template engines via [Consolidate.js](http://github.com/visionmedia/consolidate.js)\n  you can quickly craft your perfect framework.\n\n## More Information\n\n  * [Website and Documentation](http://expressjs.com/) stored at [visionmedia/expressjs.com](https://github.com/visionmedia/expressjs.com)\n  * Join #express on freenode\n  * [Google Group](http://groups.google.com/group/express-js) for discussion\n  * Follow [tjholowaychuk](http://twitter.com/tjholowaychuk) on twitter for updates\n  * Visit the [Wiki](http://github.com/visionmedia/express/wiki)\n  * [Русскоязычная документация](http://jsman.ru/express/)\n  * Run express examples [online](https://runnable.com/express)\n\n## Viewing Examples\n\nClone the Express repo, then install the dev dependencies to install all the example / test suite deps:\n\n    $ git clone git://github.com/visionmedia/express.git --depth 1\n    $ cd express\n    $ npm install\n\nthen run whichever tests you want:\n\n    $ node examples/content-negotiation\n\nYou can also view live examples here\n\n<a href="https://runnable.com/express" target="_blank"><img src="https://runnable.com/external/styles/assets/runnablebtn.png" style="width:67px;height:25px;"></a>\n\n## Running Tests\n\nTo run the test suite first invoke the following command within the repo, installing the development dependencies:\n\n    $ npm install\n\nthen run the tests:\n\n    $ make test\n\n## Contributors\n\n  https://github.com/visionmedia/express/graphs/contributors\n\n## License\n\n(The MIT License)\n\nCopyright (c) 2009-2012 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+54 silly resolved     readmeFilename: 'Readme.md',
+54 silly resolved     bugs: { url: 'https://github.com/visionmedia/express/issues' },
+54 silly resolved     _id: 'express@3.4.4',
+54 silly resolved     _from: 'express@~3.4.0' } ]
+55 info install express@3.4.4 into /Users/nherment/workspace/dolphyn
+56 info installOne express@3.4.4
+57 verbose from cache /Users/nherment/.npm/express/3.4.4/package/package.json
+58 info /Users/nherment/workspace/dolphyn/node_modules/express unbuild
+59 verbose read json /Users/nherment/workspace/dolphyn/node_modules/express/package.json
+60 verbose tar unpack /Users/nherment/.npm/express/3.4.4/package.tgz
+61 silly lockFile 6dc2cbb4-ace-dolphyn-node-modules-express tar:///Users/nherment/workspace/dolphyn/node_modules/express
+62 verbose lock tar:///Users/nherment/workspace/dolphyn/node_modules/express /Users/nherment/.npm/6dc2cbb4-ace-dolphyn-node-modules-express.lock
+63 silly lockFile d7cfc194-nt-npm-express-3-4-4-package-tgz tar:///Users/nherment/.npm/express/3.4.4/package.tgz
+64 verbose lock tar:///Users/nherment/.npm/express/3.4.4/package.tgz /Users/nherment/.npm/d7cfc194-nt-npm-express-3-4-4-package-tgz.lock
+65 silly gunzTarPerm modes [ '755', '644' ]
+66 silly gunzTarPerm extractEntry package.json
+67 silly gunzTarPerm extractEntry .npmignore
+68 silly gunzTarPerm extractEntry LICENSE
+69 silly gunzTarPerm extractEntry index.js
+70 silly gunzTarPerm extractEntry .travis.yml
+71 silly gunzTarPerm extractEntry History.md
+72 silly gunzTarPerm extractEntry Makefile
+73 silly gunzTarPerm extractEntry Readme.md
+74 silly gunzTarPerm extractEntry bin/express
+75 silly gunzTarPerm extractEntry lib/application.js
+76 silly gunzTarPerm extractEntry lib/express.js
+77 silly gunzTarPerm extractEntry lib/middleware.js
+78 silly gunzTarPerm extractEntry lib/request.js
+79 silly gunzTarPerm extractEntry lib/response.js
+80 silly gunzTarPerm extractEntry lib/utils.js
+81 silly gunzTarPerm extractEntry lib/view.js
+82 silly gunzTarPerm extractEntry lib/router/index.js
+83 silly gunzTarPerm extractEntry lib/router/route.js
+84 verbose read json /Users/nherment/workspace/dolphyn/node_modules/express/package.json
+85 silly lockFile 6dc2cbb4-ace-dolphyn-node-modules-express tar:///Users/nherment/workspace/dolphyn/node_modules/express
+86 silly lockFile 6dc2cbb4-ace-dolphyn-node-modules-express tar:///Users/nherment/workspace/dolphyn/node_modules/express
+87 silly lockFile d7cfc194-nt-npm-express-3-4-4-package-tgz tar:///Users/nherment/.npm/express/3.4.4/package.tgz
+88 silly lockFile d7cfc194-nt-npm-express-3-4-4-package-tgz tar:///Users/nherment/.npm/express/3.4.4/package.tgz
+89 info preinstall express@3.4.4
+90 verbose from cache /Users/nherment/workspace/dolphyn/node_modules/express/package.json
+91 verbose readDependencies using package.json deps
+92 verbose from cache /Users/nherment/workspace/dolphyn/node_modules/express/package.json
+93 verbose readDependencies using package.json deps
+94 verbose cache add [ 'connect@2.11.0', null ]
+95 verbose cache add name=undefined spec="connect@2.11.0" args=["connect@2.11.0",null]
+96 verbose parsed url { protocol: null,
+96 verbose parsed url   slashes: null,
+96 verbose parsed url   auth: null,
+96 verbose parsed url   host: null,
+96 verbose parsed url   port: null,
+96 verbose parsed url   hostname: null,
+96 verbose parsed url   hash: null,
+96 verbose parsed url   search: null,
+96 verbose parsed url   query: null,
+96 verbose parsed url   pathname: 'connect@2.11.0',
+96 verbose parsed url   path: 'connect@2.11.0',
+96 verbose parsed url   href: 'connect@2.11.0' }
+97 verbose cache add name="connect" spec="2.11.0" args=["connect","2.11.0"]
+98 verbose parsed url { protocol: null,
+98 verbose parsed url   slashes: null,
+98 verbose parsed url   auth: null,
+98 verbose parsed url   host: null,
+98 verbose parsed url   port: null,
+98 verbose parsed url   hostname: null,
+98 verbose parsed url   hash: null,
+98 verbose parsed url   search: null,
+98 verbose parsed url   query: null,
+98 verbose parsed url   pathname: '2.11.0',
+98 verbose parsed url   path: '2.11.0',
+98 verbose parsed url   href: '2.11.0' }
+99 verbose addNamed [ 'connect', '2.11.0' ]
+100 verbose addNamed [ '2.11.0', '2.11.0' ]
+101 silly lockFile 5ddacddd-connect-2-11-0 connect@2.11.0
+102 verbose lock connect@2.11.0 /Users/nherment/.npm/5ddacddd-connect-2-11-0.lock
+103 verbose cache add [ 'commander@1.3.2', null ]
+104 verbose cache add name=undefined spec="commander@1.3.2" args=["commander@1.3.2",null]
+105 verbose parsed url { protocol: null,
+105 verbose parsed url   slashes: null,
+105 verbose parsed url   auth: null,
+105 verbose parsed url   host: null,
+105 verbose parsed url   port: null,
+105 verbose parsed url   hostname: null,
+105 verbose parsed url   hash: null,
+105 verbose parsed url   search: null,
+105 verbose parsed url   query: null,
+105 verbose parsed url   pathname: 'commander@1.3.2',
+105 verbose parsed url   path: 'commander@1.3.2',
+105 verbose parsed url   href: 'commander@1.3.2' }
+106 verbose cache add name="commander" spec="1.3.2" args=["commander","1.3.2"]
+107 verbose parsed url { protocol: null,
+107 verbose parsed url   slashes: null,
+107 verbose parsed url   auth: null,
+107 verbose parsed url   host: null,
+107 verbose parsed url   port: null,
+107 verbose parsed url   hostname: null,
+107 verbose parsed url   hash: null,
+107 verbose parsed url   search: null,
+107 verbose parsed url   query: null,
+107 verbose parsed url   pathname: '1.3.2',
+107 verbose parsed url   path: '1.3.2',
+107 verbose parsed url   href: '1.3.2' }
+108 verbose addNamed [ 'commander', '1.3.2' ]
+109 verbose addNamed [ '1.3.2', '1.3.2' ]
+110 silly lockFile 2016e061-commander-1-3-2 commander@1.3.2
+111 verbose lock commander@1.3.2 /Users/nherment/.npm/2016e061-commander-1-3-2.lock
+112 verbose cache add [ 'mkdirp@0.3.5', null ]
+113 verbose cache add name=undefined spec="mkdirp@0.3.5" args=["mkdirp@0.3.5",null]
+114 verbose parsed url { protocol: null,
+114 verbose parsed url   slashes: null,
+114 verbose parsed url   auth: null,
+114 verbose parsed url   host: null,
+114 verbose parsed url   port: null,
+114 verbose parsed url   hostname: null,
+114 verbose parsed url   hash: null,
+114 verbose parsed url   search: null,
+114 verbose parsed url   query: null,
+114 verbose parsed url   pathname: 'mkdirp@0.3.5',
+114 verbose parsed url   path: 'mkdirp@0.3.5',
+114 verbose parsed url   href: 'mkdirp@0.3.5' }
+115 verbose cache add name="mkdirp" spec="0.3.5" args=["mkdirp","0.3.5"]
+116 verbose parsed url { protocol: null,
+116 verbose parsed url   slashes: null,
+116 verbose parsed url   auth: null,
+116 verbose parsed url   host: null,
+116 verbose parsed url   port: null,
+116 verbose parsed url   hostname: null,
+116 verbose parsed url   hash: null,
+116 verbose parsed url   search: null,
+116 verbose parsed url   query: null,
+116 verbose parsed url   pathname: '0.3.5',
+116 verbose parsed url   path: '0.3.5',
+116 verbose parsed url   href: '0.3.5' }
+117 verbose addNamed [ 'mkdirp', '0.3.5' ]
+118 verbose addNamed [ '0.3.5', '0.3.5' ]
+119 silly lockFile 67d2df2a-mkdirp-0-3-5 mkdirp@0.3.5
+120 verbose lock mkdirp@0.3.5 /Users/nherment/.npm/67d2df2a-mkdirp-0-3-5.lock
+121 verbose cache add [ 'range-parser@0.0.4', null ]
+122 verbose cache add name=undefined spec="range-parser@0.0.4" args=["range-parser@0.0.4",null]
+123 verbose parsed url { protocol: null,
+123 verbose parsed url   slashes: null,
+123 verbose parsed url   auth: null,
+123 verbose parsed url   host: null,
+123 verbose parsed url   port: null,
+123 verbose parsed url   hostname: null,
+123 verbose parsed url   hash: null,
+123 verbose parsed url   search: null,
+123 verbose parsed url   query: null,
+123 verbose parsed url   pathname: 'range-parser@0.0.4',
+123 verbose parsed url   path: 'range-parser@0.0.4',
+123 verbose parsed url   href: 'range-parser@0.0.4' }
+124 verbose cache add name="range-parser" spec="0.0.4" args=["range-parser","0.0.4"]
+125 verbose parsed url { protocol: null,
+125 verbose parsed url   slashes: null,
+125 verbose parsed url   auth: null,
+125 verbose parsed url   host: null,
+125 verbose parsed url   port: null,
+125 verbose parsed url   hostname: null,
+125 verbose parsed url   hash: null,
+125 verbose parsed url   search: null,
+125 verbose parsed url   query: null,
+125 verbose parsed url   pathname: '0.0.4',
+125 verbose parsed url   path: '0.0.4',
+125 verbose parsed url   href: '0.0.4' }
+126 verbose addNamed [ 'range-parser', '0.0.4' ]
+127 verbose addNamed [ '0.0.4', '0.0.4' ]
+128 silly lockFile 0760c556-range-parser-0-0-4 range-parser@0.0.4
+129 verbose lock range-parser@0.0.4 /Users/nherment/.npm/0760c556-range-parser-0-0-4.lock
+130 verbose cache add [ 'buffer-crc32@0.2.1', null ]
+131 verbose cache add name=undefined spec="buffer-crc32@0.2.1" args=["buffer-crc32@0.2.1",null]
+132 verbose parsed url { protocol: null,
+132 verbose parsed url   slashes: null,
+132 verbose parsed url   auth: null,
+132 verbose parsed url   host: null,
+132 verbose parsed url   port: null,
+132 verbose parsed url   hostname: null,
+132 verbose parsed url   hash: null,
+132 verbose parsed url   search: null,
+132 verbose parsed url   query: null,
+132 verbose parsed url   pathname: 'buffer-crc32@0.2.1',
+132 verbose parsed url   path: 'buffer-crc32@0.2.1',
+132 verbose parsed url   href: 'buffer-crc32@0.2.1' }
+133 verbose cache add name="buffer-crc32" spec="0.2.1" args=["buffer-crc32","0.2.1"]
+134 verbose parsed url { protocol: null,
+134 verbose parsed url   slashes: null,
+134 verbose parsed url   auth: null,
+134 verbose parsed url   host: null,
+134 verbose parsed url   port: null,
+134 verbose parsed url   hostname: null,
+134 verbose parsed url   hash: null,
+134 verbose parsed url   search: null,
+134 verbose parsed url   query: null,
+134 verbose parsed url   pathname: '0.2.1',
+134 verbose parsed url   path: '0.2.1',
+134 verbose parsed url   href: '0.2.1' }
+135 verbose addNamed [ 'buffer-crc32', '0.2.1' ]
+136 verbose addNamed [ '0.2.1', '0.2.1' ]
+137 silly lockFile 057d0d26-buffer-crc32-0-2-1 buffer-crc32@0.2.1
+138 verbose lock buffer-crc32@0.2.1 /Users/nherment/.npm/057d0d26-buffer-crc32-0-2-1.lock
+139 verbose cache add [ 'fresh@0.2.0', null ]
+140 verbose cache add name=undefined spec="fresh@0.2.0" args=["fresh@0.2.0",null]
+141 verbose parsed url { protocol: null,
+141 verbose parsed url   slashes: null,
+141 verbose parsed url   auth: null,
+141 verbose parsed url   host: null,
+141 verbose parsed url   port: null,
+141 verbose parsed url   hostname: null,
+141 verbose parsed url   hash: null,
+141 verbose parsed url   search: null,
+141 verbose parsed url   query: null,
+141 verbose parsed url   pathname: 'fresh@0.2.0',
+141 verbose parsed url   path: 'fresh@0.2.0',
+141 verbose parsed url   href: 'fresh@0.2.0' }
+142 verbose cache add name="fresh" spec="0.2.0" args=["fresh","0.2.0"]
+143 verbose parsed url { protocol: null,
+143 verbose parsed url   slashes: null,
+143 verbose parsed url   auth: null,
+143 verbose parsed url   host: null,
+143 verbose parsed url   port: null,
+143 verbose parsed url   hostname: null,
+143 verbose parsed url   hash: null,
+143 verbose parsed url   search: null,
+143 verbose parsed url   query: null,
+143 verbose parsed url   pathname: '0.2.0',
+143 verbose parsed url   path: '0.2.0',
+143 verbose parsed url   href: '0.2.0' }
+144 verbose addNamed [ 'fresh', '0.2.0' ]
+145 verbose addNamed [ '0.2.0', '0.2.0' ]
+146 silly lockFile 1a4cf0d3-fresh-0-2-0 fresh@0.2.0
+147 verbose lock fresh@0.2.0 /Users/nherment/.npm/1a4cf0d3-fresh-0-2-0.lock
+148 verbose cache add [ 'methods@0.1.0', null ]
+149 verbose cache add name=undefined spec="methods@0.1.0" args=["methods@0.1.0",null]
+150 verbose parsed url { protocol: null,
+150 verbose parsed url   slashes: null,
+150 verbose parsed url   auth: null,
+150 verbose parsed url   host: null,
+150 verbose parsed url   port: null,
+150 verbose parsed url   hostname: null,
+150 verbose parsed url   hash: null,
+150 verbose parsed url   search: null,
+150 verbose parsed url   query: null,
+150 verbose parsed url   pathname: 'methods@0.1.0',
+150 verbose parsed url   path: 'methods@0.1.0',
+150 verbose parsed url   href: 'methods@0.1.0' }
+151 verbose cache add name="methods" spec="0.1.0" args=["methods","0.1.0"]
+152 verbose parsed url { protocol: null,
+152 verbose parsed url   slashes: null,
+152 verbose parsed url   auth: null,
+152 verbose parsed url   host: null,
+152 verbose parsed url   port: null,
+152 verbose parsed url   hostname: null,
+152 verbose parsed url   hash: null,
+152 verbose parsed url   search: null,
+152 verbose parsed url   query: null,
+152 verbose parsed url   pathname: '0.1.0',
+152 verbose parsed url   path: '0.1.0',
+152 verbose parsed url   href: '0.1.0' }
+153 verbose addNamed [ 'methods', '0.1.0' ]
+154 verbose addNamed [ '0.1.0', '0.1.0' ]
+155 silly lockFile 81f018b6-methods-0-1-0 methods@0.1.0
+156 verbose lock methods@0.1.0 /Users/nherment/.npm/81f018b6-methods-0-1-0.lock
+157 verbose cache add [ 'send@0.1.4', null ]
+158 verbose cache add name=undefined spec="send@0.1.4" args=["send@0.1.4",null]
+159 verbose parsed url { protocol: null,
+159 verbose parsed url   slashes: null,
+159 verbose parsed url   auth: null,
+159 verbose parsed url   host: null,
+159 verbose parsed url   port: null,
+159 verbose parsed url   hostname: null,
+159 verbose parsed url   hash: null,
+159 verbose parsed url   search: null,
+159 verbose parsed url   query: null,
+159 verbose parsed url   pathname: 'send@0.1.4',
+159 verbose parsed url   path: 'send@0.1.4',
+159 verbose parsed url   href: 'send@0.1.4' }
+160 verbose cache add name="send" spec="0.1.4" args=["send","0.1.4"]
+161 verbose parsed url { protocol: null,
+161 verbose parsed url   slashes: null,
+161 verbose parsed url   auth: null,
+161 verbose parsed url   host: null,
+161 verbose parsed url   port: null,
+161 verbose parsed url   hostname: null,
+161 verbose parsed url   hash: null,
+161 verbose parsed url   search: null,
+161 verbose parsed url   query: null,
+161 verbose parsed url   pathname: '0.1.4',
+161 verbose parsed url   path: '0.1.4',
+161 verbose parsed url   href: '0.1.4' }
+162 verbose addNamed [ 'send', '0.1.4' ]
+163 verbose addNamed [ '0.1.4', '0.1.4' ]
+164 silly lockFile 555fd08a-send-0-1-4 send@0.1.4
+165 verbose lock send@0.1.4 /Users/nherment/.npm/555fd08a-send-0-1-4.lock
+166 verbose cache add [ 'cookie-signature@1.0.1', null ]
+167 verbose cache add name=undefined spec="cookie-signature@1.0.1" args=["cookie-signature@1.0.1",null]
+168 verbose parsed url { protocol: null,
+168 verbose parsed url   slashes: null,
+168 verbose parsed url   auth: null,
+168 verbose parsed url   host: null,
+168 verbose parsed url   port: null,
+168 verbose parsed url   hostname: null,
+168 verbose parsed url   hash: null,
+168 verbose parsed url   search: null,
+168 verbose parsed url   query: null,
+168 verbose parsed url   pathname: 'cookie-signature@1.0.1',
+168 verbose parsed url   path: 'cookie-signature@1.0.1',
+168 verbose parsed url   href: 'cookie-signature@1.0.1' }
+169 verbose cache add name="cookie-signature" spec="1.0.1" args=["cookie-signature","1.0.1"]
+170 verbose parsed url { protocol: null,
+170 verbose parsed url   slashes: null,
+170 verbose parsed url   auth: null,
+170 verbose parsed url   host: null,
+170 verbose parsed url   port: null,
+170 verbose parsed url   hostname: null,
+170 verbose parsed url   hash: null,
+170 verbose parsed url   search: null,
+170 verbose parsed url   query: null,
+170 verbose parsed url   pathname: '1.0.1',
+170 verbose parsed url   path: '1.0.1',
+170 verbose parsed url   href: '1.0.1' }
+171 verbose addNamed [ 'cookie-signature', '1.0.1' ]
+172 verbose addNamed [ '1.0.1', '1.0.1' ]
+173 silly lockFile d4a1eba1-cookie-signature-1-0-1 cookie-signature@1.0.1
+174 verbose lock cookie-signature@1.0.1 /Users/nherment/.npm/d4a1eba1-cookie-signature-1-0-1.lock
+175 verbose cache add [ 'debug@*', null ]
+176 verbose cache add name=undefined spec="debug@*" args=["debug@*",null]
+177 verbose parsed url { protocol: null,
+177 verbose parsed url   slashes: null,
+177 verbose parsed url   auth: null,
+177 verbose parsed url   host: null,
+177 verbose parsed url   port: null,
+177 verbose parsed url   hostname: null,
+177 verbose parsed url   hash: null,
+177 verbose parsed url   search: null,
+177 verbose parsed url   query: null,
+177 verbose parsed url   pathname: 'debug@*',
+177 verbose parsed url   path: 'debug@*',
+177 verbose parsed url   href: 'debug@*' }
+178 verbose cache add name="debug" spec="*" args=["debug","*"]
+179 verbose parsed url { protocol: null,
+179 verbose parsed url   slashes: null,
+179 verbose parsed url   auth: null,
+179 verbose parsed url   host: null,
+179 verbose parsed url   port: null,
+179 verbose parsed url   hostname: null,
+179 verbose parsed url   hash: null,
+179 verbose parsed url   search: null,
+179 verbose parsed url   query: null,
+179 verbose parsed url   pathname: '*',
+179 verbose parsed url   path: '*',
+179 verbose parsed url   href: '*' }
+180 verbose addNamed [ 'debug', '*' ]
+181 verbose addNamed [ null, '' ]
+182 silly lockFile 3ac45eff-debug debug@*
+183 verbose lock debug@* /Users/nherment/.npm/3ac45eff-debug.lock
+184 verbose url raw connect/2.11.0
+185 verbose url resolving [ 'https://registry.npmjs.org/', './connect/2.11.0' ]
+186 verbose url resolved https://registry.npmjs.org/connect/2.11.0
+187 info trying registry request attempt 1 at 21:58:06
+188 verbose etag "5KI5YRERE0GVBH2HODVZ9W4RG"
+189 http GET https://registry.npmjs.org/connect/2.11.0
+190 silly addNameRange { name: 'debug', range: '', hasData: false }
+191 verbose url raw commander/1.3.2
+192 verbose url resolving [ 'https://registry.npmjs.org/', './commander/1.3.2' ]
+193 verbose url resolved https://registry.npmjs.org/commander/1.3.2
+194 info trying registry request attempt 1 at 21:58:06
+195 verbose etag "7H6Q37LFG10A5ZA9OUZNA4JYV"
+196 http GET https://registry.npmjs.org/commander/1.3.2
+197 verbose url raw buffer-crc32/0.2.1
+198 verbose url resolving [ 'https://registry.npmjs.org/', './buffer-crc32/0.2.1' ]
+199 verbose url resolved https://registry.npmjs.org/buffer-crc32/0.2.1
+200 info trying registry request attempt 1 at 21:58:06
+201 verbose etag "DX75CPHWBHYQQB577GKLBUQSS"
+202 http GET https://registry.npmjs.org/buffer-crc32/0.2.1
+203 verbose url raw fresh/0.2.0
+204 verbose url resolving [ 'https://registry.npmjs.org/', './fresh/0.2.0' ]
+205 verbose url resolved https://registry.npmjs.org/fresh/0.2.0
+206 info trying registry request attempt 1 at 21:58:06
+207 verbose etag "EWXZWLFPPX5BKCUCXIKJXGZWO"
+208 http GET https://registry.npmjs.org/fresh/0.2.0
+209 verbose url raw mkdirp/0.3.5
+210 verbose url resolving [ 'https://registry.npmjs.org/', './mkdirp/0.3.5' ]
+211 verbose url resolved https://registry.npmjs.org/mkdirp/0.3.5
+212 info trying registry request attempt 1 at 21:58:10
+213 verbose etag "6QE4Z61NKWNXCTRR6OPAQ4WYA"
+214 http GET https://registry.npmjs.org/mkdirp/0.3.5
+215 verbose url raw methods/0.1.0
+216 verbose url resolving [ 'https://registry.npmjs.org/', './methods/0.1.0' ]
+217 verbose url resolved https://registry.npmjs.org/methods/0.1.0
+218 info trying registry request attempt 1 at 21:58:10
+219 verbose etag "E93HPBZTJHJPO71IDY587LHVW"
+220 http GET https://registry.npmjs.org/methods/0.1.0
+221 verbose url raw range-parser/0.0.4
+222 verbose url resolving [ 'https://registry.npmjs.org/', './range-parser/0.0.4' ]
+223 verbose url resolved https://registry.npmjs.org/range-parser/0.0.4
+224 info trying registry request attempt 1 at 21:58:10
+225 verbose etag "3I4H67XCE88NTDN80LXXZHDD7"
+226 http GET https://registry.npmjs.org/range-parser/0.0.4
+227 verbose url raw debug
+228 verbose url resolving [ 'https://registry.npmjs.org/', './debug' ]
+229 verbose url resolved https://registry.npmjs.org/debug
+230 info trying registry request attempt 1 at 21:58:10
+231 verbose etag "1RICBHAGWAWVEGFB1MLZGAU0E"
+232 http GET https://registry.npmjs.org/debug
+233 verbose url raw send/0.1.4
+234 verbose url resolving [ 'https://registry.npmjs.org/', './send/0.1.4' ]
+235 verbose url resolved https://registry.npmjs.org/send/0.1.4
+236 info trying registry request attempt 1 at 21:58:10
+237 verbose etag "A3C9M2X25DL19BXY7UU7ZYO5G"
+238 http GET https://registry.npmjs.org/send/0.1.4
+239 verbose url raw cookie-signature/1.0.1
+240 verbose url resolving [ 'https://registry.npmjs.org/', './cookie-signature/1.0.1' ]
+241 verbose url resolved https://registry.npmjs.org/cookie-signature/1.0.1
+242 info trying registry request attempt 1 at 21:58:10
+243 verbose etag "EFBD5LNVD3JLCA8CBNXZFGNHO"
+244 http GET https://registry.npmjs.org/cookie-signature/1.0.1
+245 info retry will retry, error on last attempt: Error: socket hang up
+246 info retry will retry, error on last attempt: Error: socket hang up
+247 info retry will retry, error on last attempt: Error: socket hang up
+248 info retry will retry, error on last attempt: Error: socket hang up
+249 info retry will retry, error on last attempt: Error: socket hang up
+250 info trying registry request attempt 2 at 21:58:29
+251 verbose etag "EWXZWLFPPX5BKCUCXIKJXGZWO"
+252 http GET https://registry.npmjs.org/fresh/0.2.0
+253 info trying registry request attempt 2 at 21:58:29
+254 verbose etag "7H6Q37LFG10A5ZA9OUZNA4JYV"
+255 http GET https://registry.npmjs.org/commander/1.3.2
+256 info trying registry request attempt 2 at 21:58:29
+257 verbose etag "DX75CPHWBHYQQB577GKLBUQSS"
+258 http GET https://registry.npmjs.org/buffer-crc32/0.2.1
+259 info trying registry request attempt 2 at 21:58:29
+260 verbose etag "5KI5YRERE0GVBH2HODVZ9W4RG"
+261 http GET https://registry.npmjs.org/connect/2.11.0
+262 info trying registry request attempt 2 at 21:58:29
+263 verbose etag "6QE4Z61NKWNXCTRR6OPAQ4WYA"
+264 http GET https://registry.npmjs.org/mkdirp/0.3.5
+265 http 304 https://registry.npmjs.org/cookie-signature/1.0.1
+266 silly registry.get cb [ 304,
+266 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+266 silly registry.get     etag: '"EFBD5LNVD3JLCA8CBNXZFGNHO"',
+266 silly registry.get     date: 'Mon, 04 Nov 2013 21:58:30 GMT',
+266 silly registry.get     'content-length': '0' } ]
+267 verbose etag cookie-signature/1.0.1 from cache
+268 verbose read json /Users/nherment/.npm/cookie-signature/1.0.1/package/package.json
+269 warn package.json cookie-signature@1.0.1 No repository field.
+270 silly lockFile d4a1eba1-cookie-signature-1-0-1 cookie-signature@1.0.1
+271 silly lockFile d4a1eba1-cookie-signature-1-0-1 cookie-signature@1.0.1
+272 info retry will retry, error on last attempt: Error: socket hang up
+273 http 304 https://registry.npmjs.org/debug
+274 silly registry.get cb [ 304,
+274 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+274 silly registry.get     etag: '"1RICBHAGWAWVEGFB1MLZGAU0E"',
+274 silly registry.get     date: 'Mon, 04 Nov 2013 21:59:51 GMT',
+274 silly registry.get     'content-length': '0' } ]
+275 verbose etag debug from cache
+276 silly addNameRange number 2 { name: 'debug', range: '', hasData: true }
+277 silly addNameRange versions [ 'debug',
+277 silly addNameRange   [ '0.0.1',
+277 silly addNameRange     '0.1.0',
+277 silly addNameRange     '0.2.0',
+277 silly addNameRange     '0.3.0',
+277 silly addNameRange     '0.4.0',
+277 silly addNameRange     '0.4.1',
+277 silly addNameRange     '0.5.0',
+277 silly addNameRange     '0.6.0',
+277 silly addNameRange     '0.7.0',
+277 silly addNameRange     '0.7.1',
+277 silly addNameRange     '0.7.2',
+277 silly addNameRange     '0.7.3' ] ]
+278 verbose addNamed [ 'debug', '0.7.3' ]
+279 verbose addNamed [ '0.7.3', '0.7.3' ]
+280 silly lockFile 2d910265-debug-0-7-3 debug@0.7.3
+281 verbose lock debug@0.7.3 /Users/nherment/.npm/2d910265-debug-0-7-3.lock
+282 verbose read json /Users/nherment/.npm/debug/0.7.3/package/package.json
+283 silly lockFile 2d910265-debug-0-7-3 debug@0.7.3
+284 silly lockFile 2d910265-debug-0-7-3 debug@0.7.3
+285 silly lockFile 3ac45eff-debug debug@*
+286 silly lockFile 3ac45eff-debug debug@*
+287 http 304 https://registry.npmjs.org/range-parser/0.0.4
+288 silly registry.get cb [ 304,
+288 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+288 silly registry.get     etag: '"3I4H67XCE88NTDN80LXXZHDD7"',
+288 silly registry.get     date: 'Mon, 04 Nov 2013 21:59:51 GMT',
+288 silly registry.get     'content-length': '0' } ]
+289 verbose etag range-parser/0.0.4 from cache
+290 http 304 https://registry.npmjs.org/methods/0.1.0
+291 silly registry.get cb [ 304,
+291 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+291 silly registry.get     etag: '"E93HPBZTJHJPO71IDY587LHVW"',
+291 silly registry.get     date: 'Mon, 04 Nov 2013 21:59:51 GMT',
+291 silly registry.get     'content-length': '0' } ]
+292 verbose etag methods/0.1.0 from cache
+293 silly lockFile 15b64a60-js-org-methods-methods-0-1-0-tgz https://registry.npmjs.org/methods/-/methods-0.1.0.tgz
+294 verbose lock https://registry.npmjs.org/methods/-/methods-0.1.0.tgz /Users/nherment/.npm/15b64a60-js-org-methods-methods-0-1-0-tgz.lock
+295 verbose read json /Users/nherment/.npm/range-parser/0.0.4/package/package.json
+296 verbose addRemoteTarball [ 'https://registry.npmjs.org/methods/-/methods-0.1.0.tgz',
+296 verbose addRemoteTarball   '335d429eefd21b7bacf2e9c922a8d2bd14a30e4f' ]
+297 info retry fetch attempt 1 at 21:59:51
+298 verbose fetch to= /var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602391790-0.20453626406379044/tmp.tgz
+299 http GET https://registry.npmjs.org/methods/-/methods-0.1.0.tgz
+300 warn package.json range-parser@0.0.4 No repository field.
+301 silly lockFile 0760c556-range-parser-0-0-4 range-parser@0.0.4
+302 silly lockFile 0760c556-range-parser-0-0-4 range-parser@0.0.4
+303 http 304 https://registry.npmjs.org/send/0.1.4
+304 silly registry.get cb [ 304,
+304 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+304 silly registry.get     etag: '"A3C9M2X25DL19BXY7UU7ZYO5G"',
+304 silly registry.get     date: 'Mon, 04 Nov 2013 21:59:51 GMT',
+304 silly registry.get     'content-length': '0' } ]
+305 verbose etag send/0.1.4 from cache
+306 verbose read json /Users/nherment/.npm/send/0.1.4/package/package.json
+307 silly lockFile 555fd08a-send-0-1-4 send@0.1.4
+308 silly lockFile 555fd08a-send-0-1-4 send@0.1.4
+309 info trying registry request attempt 3 at 21:59:55
+310 verbose etag "EWXZWLFPPX5BKCUCXIKJXGZWO"
+311 http GET https://registry.npmjs.org/fresh/0.2.0
+312 info retry will retry, error on last attempt: Error: socket hang up
+313 info retry will retry, error on last attempt: Error: socket hang up
+314 info retry will retry, error on last attempt: Error: socket hang up
+315 info retry will retry, error on last attempt: Error: socket hang up
+316 error fetch failed https://registry.npmjs.org/methods/-/methods-0.1.0.tgz
+317 info retry will retry, error on last attempt: Error: socket hang up
+318 info retry fetch attempt 2 at 22:00:22
+319 verbose fetch to= /var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602391790-0.20453626406379044/tmp.tgz
+320 http GET https://registry.npmjs.org/methods/-/methods-0.1.0.tgz
+321 error fetch failed https://registry.npmjs.org/methods/-/methods-0.1.0.tgz
+322 info retry will retry, error on last attempt: Error: socket hang up
+323 info trying registry request attempt 3 at 22:01:12
+324 verbose etag "6QE4Z61NKWNXCTRR6OPAQ4WYA"
+325 http GET https://registry.npmjs.org/mkdirp/0.3.5
+326 info trying registry request attempt 3 at 22:01:12
+327 verbose etag "7H6Q37LFG10A5ZA9OUZNA4JYV"
+328 http GET https://registry.npmjs.org/commander/1.3.2
+329 info trying registry request attempt 3 at 22:01:12
+330 verbose etag "5KI5YRERE0GVBH2HODVZ9W4RG"
+331 http GET https://registry.npmjs.org/connect/2.11.0
+332 info trying registry request attempt 3 at 22:01:12
+333 verbose etag "DX75CPHWBHYQQB577GKLBUQSS"
+334 http GET https://registry.npmjs.org/buffer-crc32/0.2.1
+335 http 304 https://registry.npmjs.org/fresh/0.2.0
+336 silly registry.get cb [ 304,
+336 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+336 silly registry.get     etag: '"EWXZWLFPPX5BKCUCXIKJXGZWO"',
+336 silly registry.get     date: 'Mon, 04 Nov 2013 22:01:31 GMT',
+336 silly registry.get     'content-length': '0' } ]
+337 verbose etag fresh/0.2.0 from cache
+338 verbose read json /Users/nherment/.npm/fresh/0.2.0/package/package.json
+339 silly lockFile 1a4cf0d3-fresh-0-2-0 fresh@0.2.0
+340 silly lockFile 1a4cf0d3-fresh-0-2-0 fresh@0.2.0
+341 http 304 https://registry.npmjs.org/commander/1.3.2
+342 silly registry.get cb [ 304,
+342 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+342 silly registry.get     etag: '"7H6Q37LFG10A5ZA9OUZNA4JYV"',
+342 silly registry.get     date: 'Mon, 04 Nov 2013 22:01:38 GMT',
+342 silly registry.get     'content-length': '0' } ]
+343 verbose etag commander/1.3.2 from cache
+344 verbose read json /Users/nherment/.npm/commander/1.3.2/package/package.json
+345 http 304 https://registry.npmjs.org/connect/2.11.0
+346 silly registry.get cb [ 304,
+346 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+346 silly registry.get     etag: '"5KI5YRERE0GVBH2HODVZ9W4RG"',
+346 silly registry.get     date: 'Mon, 04 Nov 2013 22:01:38 GMT',
+346 silly registry.get     'content-length': '0' } ]
+347 verbose etag connect/2.11.0 from cache
+348 silly lockFile 2016e061-commander-1-3-2 commander@1.3.2
+349 silly lockFile 2016e061-commander-1-3-2 commander@1.3.2
+350 silly lockFile a757645a-s-org-connect-connect-2-11-0-tgz https://registry.npmjs.org/connect/-/connect-2.11.0.tgz
+351 verbose lock https://registry.npmjs.org/connect/-/connect-2.11.0.tgz /Users/nherment/.npm/a757645a-s-org-connect-connect-2-11-0-tgz.lock
+352 verbose addRemoteTarball [ 'https://registry.npmjs.org/connect/-/connect-2.11.0.tgz',
+352 verbose addRemoteTarball   '9991ce09ff9b85d9ead27f9d41d0b2a2df2f9284' ]
+353 info retry fetch attempt 1 at 22:01:38
+354 verbose fetch to= /var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/tmp.tgz
+355 http GET https://registry.npmjs.org/connect/-/connect-2.11.0.tgz
+356 http 304 https://registry.npmjs.org/buffer-crc32/0.2.1
+357 silly registry.get cb [ 304,
+357 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+357 silly registry.get     etag: '"DX75CPHWBHYQQB577GKLBUQSS"',
+357 silly registry.get     date: 'Mon, 04 Nov 2013 22:01:38 GMT',
+357 silly registry.get     'content-length': '0' } ]
+358 verbose etag buffer-crc32/0.2.1 from cache
+359 verbose read json /Users/nherment/.npm/buffer-crc32/0.2.1/package/package.json
+360 silly lockFile 057d0d26-buffer-crc32-0-2-1 buffer-crc32@0.2.1
+361 silly lockFile 057d0d26-buffer-crc32-0-2-1 buffer-crc32@0.2.1
+362 http 304 https://registry.npmjs.org/mkdirp/0.3.5
+363 silly registry.get cb [ 304,
+363 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+363 silly registry.get     etag: '"6QE4Z61NKWNXCTRR6OPAQ4WYA"',
+363 silly registry.get     date: 'Mon, 04 Nov 2013 22:01:38 GMT',
+363 silly registry.get     'content-length': '0' } ]
+364 verbose etag mkdirp/0.3.5 from cache
+365 verbose read json /Users/nherment/.npm/mkdirp/0.3.5/package/package.json
+366 silly lockFile 67d2df2a-mkdirp-0-3-5 mkdirp@0.3.5
+367 silly lockFile 67d2df2a-mkdirp-0-3-5 mkdirp@0.3.5
+368 info retry fetch attempt 3 at 22:01:47
+369 verbose fetch to= /var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602391790-0.20453626406379044/tmp.tgz
+370 http GET https://registry.npmjs.org/methods/-/methods-0.1.0.tgz
+371 http 200 https://registry.npmjs.org/connect/-/connect-2.11.0.tgz
+372 verbose tar unpack /var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/tmp.tgz
+373 silly lockFile 3b7ae51a-98645-0-7991436466109008-package tar:///var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/package
+374 verbose lock tar:///var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/package /Users/nherment/.npm/3b7ae51a-98645-0-7991436466109008-package.lock
+375 silly lockFile c5797842-98645-0-7991436466109008-tmp-tgz tar:///var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/tmp.tgz
+376 verbose lock tar:///var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/tmp.tgz /Users/nherment/.npm/c5797842-98645-0-7991436466109008-tmp-tgz.lock
+377 silly gunzTarPerm modes [ '755', '644' ]
+378 silly gunzTarPerm extractEntry package.json
+379 silly gunzTarPerm extractEntry .npmignore
+380 silly gunzTarPerm extractEntry LICENSE
+381 silly gunzTarPerm extractEntry index.js
+382 silly gunzTarPerm extractEntry .travis.yml
+383 silly gunzTarPerm extractEntry Readme.md
+384 silly gunzTarPerm extractEntry lib/cache.js
+385 silly gunzTarPerm extractEntry lib/connect.js
+386 silly gunzTarPerm extractEntry lib/index.js
+387 silly gunzTarPerm extractEntry lib/patch.js
+388 silly gunzTarPerm extractEntry lib/proto.js
+389 silly gunzTarPerm extractEntry lib/utils.js
+390 silly gunzTarPerm extractEntry lib/middleware/basicAuth.js
+391 silly gunzTarPerm extractEntry lib/middleware/errorHandler.js
+392 silly gunzTarPerm extractEntry lib/middleware/favicon.js
+393 silly gunzTarPerm extractEntry lib/middleware/json.js
+394 silly gunzTarPerm extractEntry lib/middleware/limit.js
+395 silly gunzTarPerm extractEntry lib/middleware/directory.js
+396 silly gunzTarPerm extractEntry lib/middleware/methodOverride.js
+397 silly gunzTarPerm extractEntry lib/middleware/multipart.js
+398 silly gunzTarPerm extractEntry lib/middleware/query.js
+399 silly gunzTarPerm extractEntry lib/middleware/responseTime.js
+400 silly gunzTarPerm extractEntry lib/middleware/urlencoded.js
+401 silly gunzTarPerm extractEntry lib/middleware/csrf.js
+402 silly gunzTarPerm extractEntry lib/middleware/session.js
+403 silly gunzTarPerm extractEntry lib/middleware/cookieSession.js
+404 silly gunzTarPerm extractEntry lib/middleware/static.js
+405 silly gunzTarPerm extractEntry lib/middleware/cookieParser.js
+406 silly gunzTarPerm extractEntry lib/middleware/staticCache.js
+407 silly gunzTarPerm extractEntry lib/middleware/compress.js
+408 silly gunzTarPerm extractEntry lib/middleware/timeout.js
+409 silly gunzTarPerm extractEntry lib/middleware/bodyParser.js
+410 silly gunzTarPerm extractEntry lib/middleware/vhost.js
+411 silly gunzTarPerm extractEntry lib/middleware/logger.js
+412 silly gunzTarPerm extractEntry lib/middleware/session/cookie.js
+413 silly gunzTarPerm extractEntry lib/middleware/session/memory.js
+414 silly gunzTarPerm extractEntry lib/middleware/session/session.js
+415 silly gunzTarPerm extractEntry lib/middleware/session/store.js
+416 silly gunzTarPerm extractEntry lib/public/directory.html
+417 silly gunzTarPerm extractEntry lib/public/error.html
+418 silly gunzTarPerm extractEntry lib/public/favicon.ico
+419 silly gunzTarPerm extractEntry lib/public/icons/page_white_edit.png
+420 silly gunzTarPerm extractEntry lib/public/icons/page.png
+421 silly gunzTarPerm extractEntry lib/public/icons/page_attach.png
+422 silly gunzTarPerm extractEntry lib/public/icons/page_code.png
+423 silly gunzTarPerm extractEntry lib/public/icons/page_copy.png
+424 silly gunzTarPerm extractEntry lib/public/icons/page_delete.png
+425 silly gunzTarPerm extractEntry lib/public/icons/page_edit.png
+426 silly gunzTarPerm extractEntry lib/public/icons/page_error.png
+427 silly gunzTarPerm extractEntry lib/public/icons/page_excel.png
+428 silly gunzTarPerm extractEntry lib/public/icons/page_find.png
+429 silly gunzTarPerm extractEntry lib/public/icons/page_gear.png
+430 silly gunzTarPerm extractEntry lib/public/icons/page_go.png
+431 silly gunzTarPerm extractEntry lib/public/icons/page_green.png
+432 silly gunzTarPerm extractEntry lib/public/icons/page_key.png
+433 silly gunzTarPerm extractEntry lib/public/icons/page_lightning.png
+434 silly gunzTarPerm extractEntry lib/public/icons/page_link.png
+435 silly gunzTarPerm extractEntry lib/public/icons/page_paintbrush.png
+436 silly gunzTarPerm extractEntry lib/public/icons/page_paste.png
+437 silly gunzTarPerm extractEntry lib/public/icons/page_red.png
+438 silly gunzTarPerm extractEntry lib/public/icons/page_refresh.png
+439 silly gunzTarPerm extractEntry lib/public/icons/page_save.png
+440 silly gunzTarPerm extractEntry lib/public/icons/page_white.png
+441 silly gunzTarPerm extractEntry lib/public/icons/page_white_acrobat.png
+442 silly gunzTarPerm extractEntry lib/public/icons/page_white_actionscript.png
+443 silly gunzTarPerm extractEntry lib/public/icons/page_white_add.png
+444 silly gunzTarPerm extractEntry lib/public/icons/page_white_c.png
+445 silly gunzTarPerm extractEntry lib/public/icons/page_white_camera.png
+446 silly gunzTarPerm extractEntry lib/public/icons/page_white_cd.png
+447 silly gunzTarPerm extractEntry lib/public/icons/page_white_code.png
+448 silly gunzTarPerm extractEntry lib/public/icons/page_white_code_red.png
+449 silly gunzTarPerm extractEntry lib/public/icons/page_white_coldfusion.png
+450 silly gunzTarPerm extractEntry lib/public/icons/page_white_compressed.png
+451 silly gunzTarPerm extractEntry lib/public/icons/page_white_copy.png
+452 silly gunzTarPerm extractEntry lib/public/icons/page_white_cplusplus.png
+453 silly gunzTarPerm extractEntry lib/public/icons/page_white_csharp.png
+454 silly gunzTarPerm extractEntry lib/public/icons/page_white_cup.png
+455 silly gunzTarPerm extractEntry lib/public/icons/page_white_database.png
+456 silly gunzTarPerm extractEntry lib/public/icons/page_white_delete.png
+457 silly gunzTarPerm extractEntry lib/public/icons/page_white_dvd.png
+458 silly gunzTarPerm extractEntry lib/public/icons/page_add.png
+459 silly gunzTarPerm extractEntry lib/public/icons/page_white_error.png
+460 silly gunzTarPerm extractEntry lib/public/icons/page_white_excel.png
+461 silly gunzTarPerm extractEntry lib/public/icons/page_white_find.png
+462 silly gunzTarPerm extractEntry lib/public/icons/page_white_flash.png
+463 silly gunzTarPerm extractEntry lib/public/icons/page_white_freehand.png
+464 silly gunzTarPerm extractEntry lib/public/icons/page_white_gear.png
+465 silly gunzTarPerm extractEntry lib/public/icons/page_white_get.png
+466 silly gunzTarPerm extractEntry lib/public/icons/page_white_go.png
+467 silly gunzTarPerm extractEntry lib/public/icons/page_white_h.png
+468 silly gunzTarPerm extractEntry lib/public/icons/page_white_horizontal.png
+469 silly gunzTarPerm extractEntry lib/public/icons/page_white_key.png
+470 silly gunzTarPerm extractEntry lib/public/icons/page_white_lightning.png
+471 silly gunzTarPerm extractEntry lib/public/icons/page_white_link.png
+472 silly gunzTarPerm extractEntry lib/public/icons/page_white_magnify.png
+473 silly gunzTarPerm extractEntry lib/public/icons/page_white_medal.png
+474 silly gunzTarPerm extractEntry lib/public/icons/page_white_office.png
+475 silly gunzTarPerm extractEntry lib/public/icons/page_white_paint.png
+476 silly gunzTarPerm extractEntry lib/public/icons/page_white_paintbrush.png
+477 silly gunzTarPerm extractEntry lib/public/icons/page_white_paste.png
+478 silly gunzTarPerm extractEntry lib/public/icons/page_white_php.png
+479 silly gunzTarPerm extractEntry lib/public/icons/page_white_picture.png
+480 silly gunzTarPerm extractEntry lib/public/icons/page_white_powerpoint.png
+481 silly gunzTarPerm extractEntry lib/public/icons/page_white_put.png
+482 silly gunzTarPerm extractEntry lib/public/icons/page_white_ruby.png
+483 silly gunzTarPerm extractEntry lib/public/icons/page_white_stack.png
+484 silly gunzTarPerm extractEntry lib/public/icons/page_white_star.png
+485 silly gunzTarPerm extractEntry lib/public/icons/page_white_swoosh.png
+486 silly gunzTarPerm extractEntry lib/public/icons/page_white_text.png
+487 silly gunzTarPerm extractEntry lib/public/icons/page_white_text_width.png
+488 silly gunzTarPerm extractEntry lib/public/icons/page_white_tux.png
+489 silly gunzTarPerm extractEntry lib/public/icons/page_white_vector.png
+490 silly gunzTarPerm extractEntry lib/public/icons/page_white_visualstudio.png
+491 silly gunzTarPerm extractEntry lib/public/icons/page_white_width.png
+492 silly gunzTarPerm extractEntry lib/public/icons/page_white_word.png
+493 silly gunzTarPerm extractEntry lib/public/icons/page_white_world.png
+494 silly gunzTarPerm extractEntry lib/public/icons/page_white_wrench.png
+495 silly gunzTarPerm extractEntry lib/public/icons/page_white_zip.png
+496 silly gunzTarPerm extractEntry lib/public/icons/page_word.png
+497 silly gunzTarPerm extractEntry lib/public/icons/page_world.png
+498 silly gunzTarPerm extractEntry lib/public/style.css
+499 verbose read json /var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/package/package.json
+500 silly lockFile 3b7ae51a-98645-0-7991436466109008-package tar:///var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/package
+501 silly lockFile 3b7ae51a-98645-0-7991436466109008-package tar:///var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/package
+502 silly lockFile c5797842-98645-0-7991436466109008-tmp-tgz tar:///var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/tmp.tgz
+503 silly lockFile c5797842-98645-0-7991436466109008-tmp-tgz tar:///var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/tmp.tgz
+504 verbose from cache /var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/package/package.json
+505 verbose tar pack [ '/Users/nherment/.npm/connect/2.11.0/package.tgz',
+505 verbose tar pack   '/var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/package' ]
+506 verbose tarball /Users/nherment/.npm/connect/2.11.0/package.tgz
+507 verbose folder /var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/package
+508 silly lockFile 3b7ae51a-98645-0-7991436466109008-package tar:///var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/package
+509 verbose lock tar:///var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/package /Users/nherment/.npm/3b7ae51a-98645-0-7991436466109008-package.lock
+510 silly lockFile caa75c73-t-npm-connect-2-11-0-package-tgz tar:///Users/nherment/.npm/connect/2.11.0/package.tgz
+511 verbose lock tar:///Users/nherment/.npm/connect/2.11.0/package.tgz /Users/nherment/.npm/caa75c73-t-npm-connect-2-11-0-package-tgz.lock
+512 silly lockFile 3b7ae51a-98645-0-7991436466109008-package tar:///var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/package
+513 silly lockFile 3b7ae51a-98645-0-7991436466109008-package tar:///var/folders/kz/70q3ddtj4yv1tmq930cxp1jw0000gn/T/npm-97324/1383602498645-0.7991436466109008/package
+514 silly lockFile caa75c73-t-npm-connect-2-11-0-package-tgz tar:///Users/nherment/.npm/connect/2.11.0/package.tgz
+515 silly lockFile caa75c73-t-npm-connect-2-11-0-package-tgz tar:///Users/nherment/.npm/connect/2.11.0/package.tgz
+516 silly lockFile 8a00afe5-rment-npm-connect-2-11-0-package /Users/nherment/.npm/connect/2.11.0/package
+517 verbose lock /Users/nherment/.npm/connect/2.11.0/package /Users/nherment/.npm/8a00afe5-rment-npm-connect-2-11-0-package.lock
+518 silly lockFile 8a00afe5-rment-npm-connect-2-11-0-package /Users/nherment/.npm/connect/2.11.0/package
+519 silly lockFile 8a00afe5-rment-npm-connect-2-11-0-package /Users/nherment/.npm/connect/2.11.0/package
+520 verbose tar unpack /Users/nherment/.npm/connect/2.11.0/package.tgz
+521 silly lockFile 7f63e58c-rment-npm-connect-2-11-0-package tar:///Users/nherment/.npm/connect/2.11.0/package
+522 verbose lock tar:///Users/nherment/.npm/connect/2.11.0/package /Users/nherment/.npm/7f63e58c-rment-npm-connect-2-11-0-package.lock
+523 silly lockFile caa75c73-t-npm-connect-2-11-0-package-tgz tar:///Users/nherment/.npm/connect/2.11.0/package.tgz
+524 verbose lock tar:///Users/nherment/.npm/connect/2.11.0/package.tgz /Users/nherment/.npm/caa75c73-t-npm-connect-2-11-0-package-tgz.lock
+525 silly gunzTarPerm modes [ '755', '644' ]
+526 silly gunzTarPerm extractEntry package.json
+527 silly gunzTarPerm extractEntry .npmignore
+528 silly gunzTarPerm extractEntry LICENSE
+529 silly gunzTarPerm extractEntry index.js
+530 silly gunzTarPerm extractEntry .travis.yml
+531 silly gunzTarPerm extractEntry Readme.md
+532 silly gunzTarPerm extractEntry lib/cache.js
+533 silly gunzTarPerm extractEntry lib/connect.js
+534 silly gunzTarPerm extractEntry lib/index.js
+535 silly gunzTarPerm extractEntry lib/patch.js
+536 silly gunzTarPerm extractEntry lib/proto.js
+537 silly gunzTarPerm extractEntry lib/utils.js
+538 silly gunzTarPerm extractEntry lib/middleware/basicAuth.js
+539 silly gunzTarPerm extractEntry lib/middleware/errorHandler.js
+540 silly gunzTarPerm extractEntry lib/middleware/favicon.js
+541 silly gunzTarPerm extractEntry lib/middleware/json.js
+542 silly gunzTarPerm extractEntry lib/middleware/limit.js
+543 silly gunzTarPerm extractEntry lib/middleware/directory.js
+544 silly gunzTarPerm extractEntry lib/middleware/methodOverride.js
+545 silly gunzTarPerm extractEntry lib/middleware/multipart.js
+546 silly gunzTarPerm extractEntry lib/middleware/query.js
+547 silly gunzTarPerm extractEntry lib/middleware/responseTime.js
+548 silly gunzTarPerm extractEntry lib/middleware/urlencoded.js
+549 silly gunzTarPerm extractEntry lib/middleware/csrf.js
+550 silly gunzTarPerm extractEntry lib/middleware/session.js
+551 silly gunzTarPerm extractEntry lib/middleware/cookieSession.js
+552 silly gunzTarPerm extractEntry lib/middleware/static.js
+553 silly gunzTarPerm extractEntry lib/middleware/cookieParser.js
+554 silly gunzTarPerm extractEntry lib/middleware/staticCache.js
+555 silly gunzTarPerm extractEntry lib/middleware/compress.js
+556 silly gunzTarPerm extractEntry lib/middleware/timeout.js
+557 silly gunzTarPerm extractEntry lib/middleware/bodyParser.js
+558 silly gunzTarPerm extractEntry lib/middleware/vhost.js
+559 silly gunzTarPerm extractEntry lib/middleware/logger.js
+560 silly gunzTarPerm extractEntry lib/middleware/session/cookie.js
+561 silly gunzTarPerm extractEntry lib/middleware/session/memory.js
+562 silly gunzTarPerm extractEntry lib/middleware/session/session.js
+563 silly gunzTarPerm extractEntry lib/middleware/session/store.js
+564 silly gunzTarPerm extractEntry lib/public/directory.html
+565 silly gunzTarPerm extractEntry lib/public/error.html
+566 silly gunzTarPerm extractEntry lib/public/favicon.ico
+567 silly gunzTarPerm extractEntry lib/public/icons/page_white_edit.png
+568 silly gunzTarPerm extractEntry lib/public/icons/page.png
+569 silly gunzTarPerm extractEntry lib/public/icons/page_attach.png
+570 silly gunzTarPerm extractEntry lib/public/icons/page_code.png
+571 silly gunzTarPerm extractEntry lib/public/icons/page_copy.png
+572 silly gunzTarPerm extractEntry lib/public/icons/page_delete.png
+573 silly gunzTarPerm extractEntry lib/public/icons/page_edit.png
+574 silly gunzTarPerm extractEntry lib/public/icons/page_error.png
+575 silly gunzTarPerm extractEntry lib/public/icons/page_excel.png
+576 silly gunzTarPerm extractEntry lib/public/icons/page_find.png
+577 silly gunzTarPerm extractEntry lib/public/icons/page_gear.png
+578 silly gunzTarPerm extractEntry lib/public/icons/page_go.png
+579 silly gunzTarPerm extractEntry lib/public/icons/page_green.png
+580 silly gunzTarPerm extractEntry lib/public/icons/page_key.png
+581 silly gunzTarPerm extractEntry lib/public/icons/page_lightning.png
+582 silly gunzTarPerm extractEntry lib/public/icons/page_link.png
+583 silly gunzTarPerm extractEntry lib/public/icons/page_paintbrush.png
+584 silly gunzTarPerm extractEntry lib/public/icons/page_paste.png
+585 silly gunzTarPerm extractEntry lib/public/icons/page_red.png
+586 silly gunzTarPerm extractEntry lib/public/icons/page_refresh.png
+587 silly gunzTarPerm extractEntry lib/public/icons/page_save.png
+588 silly gunzTarPerm extractEntry lib/public/icons/page_white.png
+589 silly gunzTarPerm extractEntry lib/public/icons/page_white_acrobat.png
+590 silly gunzTarPerm extractEntry lib/public/icons/page_white_actionscript.png
+591 silly gunzTarPerm extractEntry lib/public/icons/page_white_add.png
+592 silly gunzTarPerm extractEntry lib/public/icons/page_white_c.png
+593 silly gunzTarPerm extractEntry lib/public/icons/page_white_camera.png
+594 silly gunzTarPerm extractEntry lib/public/icons/page_white_cd.png
+595 silly gunzTarPerm extractEntry lib/public/icons/page_white_code.png
+596 silly gunzTarPerm extractEntry lib/public/icons/page_white_code_red.png
+597 silly gunzTarPerm extractEntry lib/public/icons/page_white_coldfusion.png
+598 silly gunzTarPerm extractEntry lib/public/icons/page_white_compressed.png
+599 silly gunzTarPerm extractEntry lib/public/icons/page_white_copy.png
+600 silly gunzTarPerm extractEntry lib/public/icons/page_white_cplusplus.png
+601 silly gunzTarPerm extractEntry lib/public/icons/page_white_csharp.png
+602 silly gunzTarPerm extractEntry lib/public/icons/page_white_cup.png
+603 silly gunzTarPerm extractEntry lib/public/icons/page_white_database.png
+604 silly gunzTarPerm extractEntry lib/public/icons/page_white_delete.png
+605 silly gunzTarPerm extractEntry lib/public/icons/page_white_dvd.png
+606 silly gunzTarPerm extractEntry lib/public/icons/page_add.png
+607 silly gunzTarPerm extractEntry lib/public/icons/page_white_error.png
+608 silly gunzTarPerm extractEntry lib/public/icons/page_white_excel.png
+609 silly gunzTarPerm extractEntry lib/public/icons/page_white_find.png
+610 silly gunzTarPerm extractEntry lib/public/icons/page_white_flash.png
+611 silly gunzTarPerm extractEntry lib/public/icons/page_white_freehand.png
+612 silly gunzTarPerm extractEntry lib/public/icons/page_white_gear.png
+613 silly gunzTarPerm extractEntry lib/public/icons/page_white_get.png
+614 silly gunzTarPerm extractEntry lib/public/icons/page_white_go.png
+615 silly gunzTarPerm extractEntry lib/public/icons/page_white_h.png
+616 silly gunzTarPerm extractEntry lib/public/icons/page_white_horizontal.png
+617 silly gunzTarPerm extractEntry lib/public/icons/page_white_key.png
+618 silly gunzTarPerm extractEntry lib/public/icons/page_white_lightning.png
+619 silly gunzTarPerm extractEntry lib/public/icons/page_white_link.png
+620 silly gunzTarPerm extractEntry lib/public/icons/page_white_magnify.png
+621 silly gunzTarPerm extractEntry lib/public/icons/page_white_medal.png
+622 silly gunzTarPerm extractEntry lib/public/icons/page_white_office.png
+623 silly gunzTarPerm extractEntry lib/public/icons/page_white_paint.png
+624 silly gunzTarPerm extractEntry lib/public/icons/page_white_paintbrush.png
+625 silly gunzTarPerm extractEntry lib/public/icons/page_white_paste.png
+626 silly gunzTarPerm extractEntry lib/public/icons/page_white_php.png
+627 silly gunzTarPerm extractEntry lib/public/icons/page_white_picture.png
+628 silly gunzTarPerm extractEntry lib/public/icons/page_white_powerpoint.png
+629 silly gunzTarPerm extractEntry lib/public/icons/page_white_put.png
+630 silly gunzTarPerm extractEntry lib/public/icons/page_white_ruby.png
+631 silly gunzTarPerm extractEntry lib/public/icons/page_white_stack.png
+632 silly gunzTarPerm extractEntry lib/public/icons/page_white_star.png
+633 silly gunzTarPerm extractEntry lib/public/icons/page_white_swoosh.png
+634 silly gunzTarPerm extractEntry lib/public/icons/page_white_text.png
+635 silly gunzTarPerm extractEntry lib/public/icons/page_white_text_width.png
+636 silly gunzTarPerm extractEntry lib/public/icons/page_white_tux.png
+637 silly gunzTarPerm extractEntry lib/public/icons/page_white_vector.png
+638 silly gunzTarPerm extractEntry lib/public/icons/page_white_visualstudio.png
+639 silly gunzTarPerm extractEntry lib/public/icons/page_white_width.png
+640 silly gunzTarPerm extractEntry lib/public/icons/page_white_word.png
+641 silly gunzTarPerm extractEntry lib/public/icons/page_white_world.png
+642 silly gunzTarPerm extractEntry lib/public/icons/page_white_wrench.png
+643 silly gunzTarPerm extractEntry lib/public/icons/page_white_zip.png
+644 silly gunzTarPerm extractEntry lib/public/icons/page_word.png
+645 silly gunzTarPerm extractEntry lib/public/icons/page_world.png
+646 silly gunzTarPerm extractEntry lib/public/style.css
+647 verbose read json /Users/nherment/.npm/connect/2.11.0/package/package.json
+648 silly lockFile 7f63e58c-rment-npm-connect-2-11-0-package tar:///Users/nherment/.npm/connect/2.11.0/package
+649 silly lockFile 7f63e58c-rment-npm-connect-2-11-0-package tar:///Users/nherment/.npm/connect/2.11.0/package
+650 silly lockFile caa75c73-t-npm-connect-2-11-0-package-tgz tar:///Users/nherment/.npm/connect/2.11.0/package.tgz
+651 silly lockFile caa75c73-t-npm-connect-2-11-0-package-tgz tar:///Users/nherment/.npm/connect/2.11.0/package.tgz
+652 verbose from cache /Users/nherment/.npm/connect/2.11.0/package/package.json
+653 verbose chmod /Users/nherment/.npm/connect/2.11.0/package.tgz 644
+654 verbose chown /Users/nherment/.npm/connect/2.11.0/package.tgz [ 501, 20 ]
+655 silly lockFile a757645a-s-org-connect-connect-2-11-0-tgz https://registry.npmjs.org/connect/-/connect-2.11.0.tgz
+656 silly lockFile a757645a-s-org-connect-connect-2-11-0-tgz https://registry.npmjs.org/connect/-/connect-2.11.0.tgz
+657 silly lockFile 5ddacddd-connect-2-11-0 connect@2.11.0
+658 silly lockFile 5ddacddd-connect-2-11-0 connect@2.11.0
+659 error fetch failed https://registry.npmjs.org/methods/-/methods-0.1.0.tgz
+660 silly lockFile 15b64a60-js-org-methods-methods-0-1-0-tgz https://registry.npmjs.org/methods/-/methods-0.1.0.tgz
+661 silly lockFile 15b64a60-js-org-methods-methods-0-1-0-tgz https://registry.npmjs.org/methods/-/methods-0.1.0.tgz
+662 silly lockFile 81f018b6-methods-0-1-0 methods@0.1.0
+663 silly lockFile 81f018b6-methods-0-1-0 methods@0.1.0
+664 verbose about to build /Users/nherment/workspace/dolphyn/node_modules/express
+665 info /Users/nherment/workspace/dolphyn/node_modules/express unbuild
+666 verbose from cache /Users/nherment/workspace/dolphyn/node_modules/express/package.json
+667 info preuninstall express@3.4.4
+668 info uninstall express@3.4.4
+669 verbose true,/Users/nherment/workspace/dolphyn/node_modules,/Users/nherment/workspace/dolphyn/node_modules unbuild express@3.4.4
+670 verbose /Users/nherment/workspace/dolphyn/node_modules/.bin,[object Object] binRoot
+671 info postuninstall express@3.4.4
+672 error Error: socket hang up
+672 error     at createHangUpError (http.js:1442:15)
+672 error     at CleartextStream.socketCloseListener (http.js:1492:23)
+672 error     at CleartextStream.EventEmitter.emit (events.js:117:20)
+672 error     at tls.js:677:10
+672 error     at process._tickCallback (node.js:415:13)
+673 error If you need help, you may report this log at:
+673 error     <http://github.com/isaacs/npm/issues>
+673 error or email it to:
+673 error     <npm-@googlegroups.com>
+674 error System Darwin 12.5.0
+675 error command "node" "/usr/local/bin/npm" "install" "express"
+676 error cwd /Users/nherment/workspace/dolphyn/web
+677 error node -v v0.10.12
+678 error npm -v 1.2.32
+679 error code ECONNRESET
+680 verbose exit [ 1, true ]
