@@ -3,3 +3,5 @@
 /.DS_Store
 
 /conf/conf.json
+
+/web/subscriptions.txt
