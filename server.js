@@ -15,7 +15,7 @@ var argv = optimist
 
 var port = argv.port || process.env.DOLPHYN_PORT || 4200
 
-server.listen(port, function() {
+server.listen(port, '::', function() {
   console.log("server listening to http://"+require("os").hostname() + ":"+port)
 })
 

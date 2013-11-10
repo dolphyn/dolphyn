@@ -8,11 +8,13 @@ function MenuCtrl($scope, $log, $routeParams, $location, menuService) {
   $scope.unreadCount = ''
 
   $scope.$on('handleBroadcast', function() {
-    if(menuService.message && menuService.message.unreadCount) {
-      if(menuService.message.unreadCount == 0) {
+    if(menuService.message) {
+      if(!menuService.message.unreadCount) {
         $scope.unreadCount = ''
+        document.title = 'Dolphyn Mail';
       } else {
         $scope.unreadCount = menuService.message.unreadCount
+        document.title = '('+$scope.unreadCount+') Dolphyn Mail';
       }
     }
   })
@@ -127,11 +129,13 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
   function unreadCount(value) {
     if(value !== undefined) {
       $scope.unreadCount = value
+      $log.log('unreadCount = ' + $scope.unreadCount)
       menuService.prepForBroadcast({unreadCount: $scope.unreadCount})
     }
     if($scope.unreadCount === undefined) {
       $scope.unreadCount = 0
     }
+
     return $scope.unreadCount
   }
 
@@ -139,12 +143,6 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
 
   if($routeParams.menu === 'Drafts') {
     $scope.edit = true
-
-    var editor = new wysihtml5.Editor("compose-body", { // id of textarea element
-      toolbar:      "compose-body-toolbar", // id of toolbar element
-      parserRules:  wysihtml5ParserRules, // defined in parser rules set
-      stylesheets: ["/css/vendor/stylesheet.css"]
-    })
   }
 
   if($routeParams.resource === 'new') {
@@ -266,7 +264,7 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
 
       if(messages[i].isUnread) {
         var cnt = unreadCount()
-        unreadCount(cnt++)
+        unreadCount(++cnt)
       }
 
       $scope.messages.push(messages[i])
@@ -358,11 +356,18 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
       for(var i = 0 ; i < $scope.messages.length ; i++) {
         // TODO: decrement unreadCount()
         if($scope.messages[i].attributes && $scope.messages[i].attributes.uid === newVersion.attributes.uid) {
+
+          if($scope.messages[i].isUnread && !newVersion.isUnread) {
+            var cnt = unreadCount()
+            unreadCount(--cnt)
+          }
+
           $scope.messages[i] = newVersion
           return newVersion
         }
       }
     }
+    $scope.messages.sort(sortByUnseenThenDate)
     return undefined
   }
 

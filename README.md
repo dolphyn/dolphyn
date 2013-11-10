@@ -1,9 +1,27 @@
+
+![Screenshot](https://raw.github.com/dolphyn/dolphyn/master/docs/design/simple_mail.png "Screenshot")
+
 Dolphyn Mail: The Beautiful WebMail
 ===================================
 
+Dolphyn mail is a webmail that connects to existing IMAP/SMTP servers. The medium term goal is to also embed IMAP and
+SMTP servers.
+
+Right now, it only allows to read emails and send new ones. The major functionality missing are:
+
+- answer emails
+- contact management (for send auto complete)
+
 It is not usable yet. ** Dolphyn Mail ** is still in progress.
 
-![Screenshot](https://raw.github.com/dolphyn/dolphyn/master/docs/design/simple_mail.png "Screenshot")
+Security: What dolphyn mail is and isn't
+----------------------------------------
+
+- Dolphyn mail helps you to host your own webmail.
+- It does encrypt 'some' sensitive information in the DB (IMAP and SMTP login and password).
+- It does not store your emails (your IMAP server does that).
+- It is not a secure communication platform.
+- It does not embed DNS, SMTP or an IMAP server yet. For these, you still need Bind9, Postfix and Dovecot.
 
 Quick Start
 ===========
@@ -62,10 +80,11 @@ Task list
 - [ ] use [Primus](https://github.com/primus/primus) instead of socket.io #refactor
 - [ ] imap disconnects after a while and do not automatically reconnects #bug
 - [ ] log account activity #sec #feature
-- [ ] update encryption when password changes
-- [ ] encryption should be based on multi factor authentication when it is activated
-- [ ] support google like TOTP
-- [ ] support SMS 2 factor auth
+- [ ] update encryption when password changes #bug #sec
+- [ ] encryption should be based on multi factor authentication when it is activated #sec #bug
+- [ ] support google like TOTP #sec feature
+- [ ] support SMS 2 factor auth #sec feature
+- [x] unread count display is broken
 
 
 The Vision
