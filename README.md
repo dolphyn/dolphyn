@@ -87,7 +87,13 @@ Task list
 - [x] unread count display is broken
 - [x] on new mail, the order gets screwed up
 - [ ] use markdown for sending emails and send them in both plain text and html
-- [ ] smart attachement reminder
+- [ ] smart attachment reminder
+- [x] basic search functionality
+- [ ] put search params in URL
+- [ ] selecting a mail for viewing should update URL for bookmarking capability
+- [ ] refactor the BoxCtrl, it deeply needs it
+- [ ] only display loadMore button if there is more mail available (especially true for search)
+- [ ] add from/to search capability
 
 The Vision
 ==========
@@ -107,16 +113,19 @@ The state of the art is even worse when it comes to encrypting stored emails.
 Make mails content a minimum secure out of the box with no configuration (The GPG user experience sucks) would be a big win for
 privacy.
 
+
 ### Replace SMTP
 
 SMTP is inherently insecure, even with GPG metadata is not secure.
 
-Make mails metadata secure, ie. preventing a third party from knowing who exchanges mails. There are technologies that
-allow anonymous networking where a single node does not know who sent the packet or who it is for.
+Make mails metadata secure, ie. preventing a third party from knowing who exchanges mails.
+
+The [Dark Mail Alliance](https://www.darkmail.info/) will provide this secure protocol. Dolphyn Mail has for objective to
+support both GPG over SMTP as well as the Dark Mail protocol.
 
 ### Be open
 
-It is sad that ** Lavabit ** shut down. It would have continued on though if it were open source.
+It is sad that **Lavabit** shut down. It would have continued on though if it were open source.
 
 Internet is made to be decentralized and your secure mail should be a service that you own. You can also use a web
 service if you wish.

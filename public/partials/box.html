@@ -4,7 +4,9 @@
     <div class="middle-column">
         <div class="title">
             <h1>{{title}}</h1>
-            <input type="text" placeholder="Search" name="search" class="search"/>
+            <form class="search" ng-submit="search()">
+                <input type="text" placeholder="Search" name="search" class="search" ng-model="searchString" />
+            </form>
         </div>
         <ol>
             <li class="email-header"

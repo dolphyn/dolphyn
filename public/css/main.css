@@ -383,6 +383,10 @@ input {
   /*width: 384px;*/
 }
 
+form.search {
+  margin: 0px;
+  float: right;
+}
 input.search {
   float: right;
   margin-right: 20px;

@@ -1,130 +1,13 @@
-'use strict'
-
-/* Controllers */
-
-function MenuCtrl($scope, $log, $routeParams, $location, menuService) {
-
-  $scope.currentMenu = $routeParams.menu
-  $scope.unreadCount = ''
-
-  $scope.$on('handleBroadcast', function() {
-    if(menuService.message) {
-      if(!menuService.message.unreadCount) {
-        $scope.unreadCount = ''
-        document.title = 'Dolphyn Mail';
-      } else {
-        $scope.unreadCount = menuService.message.unreadCount
-        document.title = '('+$scope.unreadCount+') Dolphyn Mail';
-      }
-    }
-  })
-
-  $scope.compose = function() {
-    $location.path('/app/Drafts/new')
-  }
-
-  $scope.changeMenu = function(menu) {
-    $scope.currentMenu = menu
-  }
-
-  $log.info('MenuPageCtrl:' + $routeParams.menu)
-
-  if($routeParams.menu === 'Account') {
-    $scope.template = '/partials/account.html'
-  } else {
-    $scope.template = '/partials/box.html'
-  }
-
-}
-
-function AppCtrl($scope, socket, $routeParams, $location, menuService) {
-  socket.on('unauth:user', function() {
-    if($location.path() !== '/login') {
-      $location.path('/login')
-    }
-  })
-}
-
-function SettingsCtrl($scope, socket, $sce, $log) {
-  $log.info('SettingsCtrl')
-
-  $scope.saving = false
-
-  $log.info('> get:settings')
-  socket.emit('get:settings', undefined)
-
-  socket.on('get:settings', function (settings) {
-    $log.info('< get:settings')
-    $scope.settings = settings
-  })
-
-  socket.on('error:settings', function (err) {
-    $log.error(err)
-    $scope.saving = false
-  })
-
-  socket.on('ok:settings', function () {
-    $log.info('< ok:settings')
-    $scope.saving = false
-  })
 
 
-  $scope.save = function() {
-    $scope.saving = true
-    socket.emit("save:settings", $scope.settings)
-    return false
-  }
-
-  $scope.$on('$destroy', function (event) {
-    socket.removeAllListeners();
-    // or something like
-    // socket.removeListener(this);
-  });
-}
-
-function ComposeCtrl($scope, socket, $sce, $routeParams, menuService) {
-
-}
-
-function LoginCtrl($scope, socket, $location, $log, $rootScope) {
-
-  $rootScope.logout = function() {
-    $log.info("logout")
-    socket.emit('unauth:user')
-  }
-
-  $scope.login = function() {
-    // TODO: spinner
-    $rootScope.authenticated = false
-    socket.emit('auth:user', {
-      email: $scope.email,
-      password: $scope.password
-    })
-    return false
-  }
-
-  socket.on('auth:user', function(err) {
-    if(err) {
-      $rootScope.authenticated = false
-      $log.error(err)// TODO: login feedback
-    } else {
-      $log.info('authenticated')
-      $rootScope.authenticated = true
-      $location.path('/app/INBOX/ALL')
-    }
-  })
-
-  $scope.$on('$destroy', function (event) {
-    socket.removeAllListeners();
-  });
-}
-
-function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $log) {
+function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, $location, menuService, $log) {
 
   $scope.messages = []
   $scope.selectedMessage
 
   $log.log('BoxCtrl')
+
+  $scope.loading = true
 
   function unreadCount(value) {
     if(value !== undefined) {
@@ -147,6 +30,19 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
 
   if($routeParams.resource === 'new') {
     $scope.selectedMessage = {}
+  }
+
+  $scope.search = function() {
+//    $location.search('any', $scope.searchString)
+//    $location.path('/app/' + $scope.boxId + '/search')
+
+    console.log('SEARCH: '+$scope.searchString)
+    socket.emit('search:box', $scope.searchString)
+
+    $scope.messages = []
+    $scope.selectedMessage = null
+
+    $scope.loading = true
   }
 
   if($routeParams.menu) {
@@ -180,12 +76,9 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
   if(!$rootScope.ready) {
     socket.on('ready', function() {
       $rootScope.ready = true
-      $log.info('< ready')
-      $log.info('> open:box ['+$scope.boxId+']')
       socket.emit('open:box', $scope.boxId)
     })
   } else {
-    $log.info('> open:box ['+$scope.boxId+']')
     socket.emit('open:box', $scope.boxId)
   }
 
@@ -193,7 +86,7 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
     if(err) {
       $log.error(err)
     } else {
-      $log.info('< open:box ['+box.name+']')
+      $location.search('any', null)
       socket.emit("list:unseen:conversations")
       socket.emit("list:seen")
     }
@@ -202,11 +95,18 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
   var seenMessagesUids = []
   var currentMessageIndex = 0
   socket.on('list:seen', function(seenUids) {
+    $scope.messages = []
+    $scope.selectedMessage = null
 
-    $log.info('< list:seen ['+seenUids.length+']')
-
-    seenMessagesUids = seenUids
-    loadNext()
+    if(seenUids && seenUids.length > 0) {
+      currentMessageIndex = 0
+      seenMessagesUids = seenUids
+      loadNext()
+    } else {
+      // TODO: display no results
+      $log.info('no results')
+      $scope.loading = false
+    }
   })
 
   function loadNext() {
@@ -222,7 +122,6 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
       currentMessageIndex += itemsPerRetrieve
 
       if(messagesUids.length > 0) {
-        $log.info('> list:conversations '+JSON.stringify(messagesUids))
         socket.emit("list:conversations", messagesUids)
       }
 
@@ -290,13 +189,10 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
 
   function sortByDate(a, b) {
     if(a.date < b.date) {
-      $log.debug(a.date + ' < ' + b.date)
       return 1
     } else if(a.date > b.date) {
-      $log.debug(a.date + ' > ' + b.date)
       return -1
     } else {
-      $log.debug(a.date + ' == ' + b.date)
       return 0
     }
   }
@@ -306,13 +202,9 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
     var res = 0
 
     if(a.isUnread && !b.isUnread) {
-      $log.debug(a.isUnread + ' > ' + !b.isUnread)
       res = -1
     } else if(!a.isUnread && b.isUnread) {
-      $log.debug(!a.isUnread + ' < ' + b.isUnread)
       res = 1
-    } else {
-      $log.debug(a.isUnread + ' == ' + b.isUnread)
     }
 
     return res
@@ -411,85 +303,6 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
     }
 
     socket.emit('send:message', message)
-  }
-
-}
-
-var DateHumanize = {
-
-  humanize: function(date) {
-    var dayName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    var monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-
-    var now = new Date()
-
-    var dateString = ''
-
-
-
-    if(date.getFullYear() !== now.getFullYear()) {
-
-      if(date.getMonth() !== now.getMonth()) {
-
-        dateString += monthName[date.getMonth()]
-        dateString += ' ' + formatDay(date.getDate())
-      }
-
-      dateString += ', ' + date.getFullYear()
-
-    } else {
-
-      if(date.getMonth() !== now.getMonth()) {
-
-        dateString += monthName[date.getMonth()]
-        dateString += ' ' + formatDay(date.getDate())
-        dateString += ', ' + formatTime(date)
-
-      } else {
-
-        if(date.getDate() <= (now.getDate() - 2)) {
-          dateString += dayName[date.getDay()]
-          dateString += ', ' + formatDay(date.getDate())
-        } else {
-          dateString += (date.getDate() == now.getDate()) ? 'Today' : 'Yesterday'
-          dateString += ', ' + formatTime(date)
-        }
-
-      }
-
-      return dateString
-    }
-
-    function formatDay(day) {
-      switch(day) {
-        case 1:
-        case 21:
-        case 31:
-          return day + 'st'
-        case 2:
-        case 22:
-          return day + 'nd'
-        case 3:
-        case 23:
-          return day + 'rd'
-        default:
-          return day + 'th'
-      }
-    }
-
-    function formatTime(date) {
-      var readableTime = ''
-
-      readableTime += date.getHours() + ':'
-
-      if(date.getMinutes() < 10) {
-        readableTime += '0'
-      }
-
-      readableTime += date.getMinutes()
-
-      return readableTime
-    }
   }
 
 }
