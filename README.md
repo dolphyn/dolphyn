@@ -85,7 +85,9 @@ Task list
 - [ ] support google like TOTP #sec feature
 - [ ] support SMS 2 factor auth #sec feature
 - [x] unread count display is broken
-
+- [x] on new mail, the order gets screwed up
+- [ ] use markdown for sending emails and send them in both plain text and html
+- [ ] smart attachement reminder
 
 The Vision
 ==========

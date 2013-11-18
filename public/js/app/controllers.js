@@ -254,13 +254,7 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
         continue
       }
 
-      messages[i].date = new Date(messages[i].headers.date)
-
-      messages[i].readableTime =
-        messages[i].date.getHours() +
-          ":" +
-          (messages[i].date.getMinutes() < 10 ? "0" : "") +
-          messages[i].date.getMinutes()
+      addReadableDate(messages[i])
 
       if(messages[i].isUnread) {
         var cnt = unreadCount()
@@ -272,6 +266,16 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
     }
 
     $scope.messages.sort(sortByUnseenThenDate)
+  }
+
+  function addReadableDate(message) {
+    message.date = new Date(message.headers.date)
+
+    message.readableTime =
+      message.date.getHours() +
+        ":" +
+        (message.date.getMinutes() < 10 ? "0" : "") +
+        message.date.getMinutes()
   }
 
   function sortByUnseenThenDate(a, b) {
@@ -286,10 +290,13 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
 
   function sortByDate(a, b) {
     if(a.date < b.date) {
+      $log.debug(a.date + ' < ' + b.date)
       return 1
     } else if(a.date > b.date) {
+      $log.debug(a.date + ' > ' + b.date)
       return -1
     } else {
+      $log.debug(a.date + ' == ' + b.date)
       return 0
     }
   }
@@ -299,9 +306,13 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
     var res = 0
 
     if(a.isUnread && !b.isUnread) {
+      $log.debug(a.isUnread + ' > ' + !b.isUnread)
       res = -1
     } else if(!a.isUnread && b.isUnread) {
+      $log.debug(!a.isUnread + ' < ' + b.isUnread)
       res = 1
+    } else {
+      $log.debug(a.isUnread + ' == ' + b.isUnread)
     }
 
     return res
@@ -361,7 +372,7 @@ function BoxCtrl($rootScope, $scope, socket, $sce, $routeParams, menuService, $l
             var cnt = unreadCount()
             unreadCount(--cnt)
           }
-
+          addReadableDate(newVersion)
           $scope.messages[i] = newVersion
           return newVersion
         }

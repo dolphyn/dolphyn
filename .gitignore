@@ -5,3 +5,5 @@
 /conf/conf.json
 
 /web/subscriptions.txt
+
+/dump.rdb
