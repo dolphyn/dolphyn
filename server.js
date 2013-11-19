@@ -2,12 +2,15 @@ var url                   = require('url')
 var express               = require('express')
 var app                   = express()
 var connect               = require("connect")
+var toobusy               = require("toobusy")
 var optimist              = require("optimist")
 var logger                = require('./lib/util/Logger.js')
 var server                = require('http').createServer(app)
 var SocketAPI             = require('./lib/mail/SocketAPI.js')
 var io                    = require('socket.io').listen(server)
 var HttpResponseAugmenter = require("./lib/error/HttpResponseAugmenter.js")
+
+toobusy.maxLag(10);
 
 var argv = optimist
   .usage('Usage: $0 --port [num]')
@@ -56,7 +59,11 @@ function redirect(req, res) {
 }
 
 app.get("/*", function(req, res) {
-    res.sendfile(__dirname + "/public/index.html")
+    if(toobusy()) {
+      res.send("The server is overloaded", 503);
+    } else {
+      res.sendfile(__dirname + "/public/index.html")
+    }
 })
 //
 //app.get("/configure", function(req, res) {
@@ -99,6 +106,12 @@ io.set('log level', 1)
 //  redisSub    : redis.createClient(),
 //  redisClient : redis.createClient()
 //}));
+
+process.on('SIGINT', function() {
+  server.close();
+  toobusy.shutdown();
+  process.exit();
+});
 
 io.sockets.on('connection', function (socket) {
 
